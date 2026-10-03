@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LUMI Hair</title><link rel="stylesheet" href="styles.css">
+<script src="data.js"></script>
+<script src="service.js"></script>
+<script src="app.js"></script>
+</head><body>
+<nav class="nav"><a class="logo" href="index.html">LUMI</a><div class="navlinks"><a href="index.html">Home</a><a class="active" href="hair.html">Hair</a><a href="face.html">Face</a><a href="outfit.html">Outfit</a><a href="body.html">Body</a><a href="explore.html">Explore</a></div></nav>
+<main class="container">
+  <div class="eyebrow">① Survey → ② Suggestions → ③ Tutorial</div>
+  <h1 style="margin-top:10px;">Which hairstyle suits you?</h1>
+  <p>Let LUMI know a few of your features so we can provide the perfect hairstyle suggestions.</p>
+  <div class="grid grid-2">
+    <div class="panel">
+      <h2>1. Features Survey</h2>
+      <div style="margin-bottom:20px;">
+        <strong>What is your face shape?</strong>
+        <div class="pills" style="margin-top:10px;">
+          <button class="pill" data-val="round" onclick="selectPill(this, 'faceShape', 'hair')">Round</button>
+          <button class="pill" data-val="v-line" onclick="selectPill(this, 'faceShape', 'hair')">V-line</button>
+          <button class="pill" data-val="square" onclick="selectPill(this, 'faceShape', 'hair')">Square</button>
+        </div>
+      </div>
+      <div>
+        <strong>What is your hair type?</strong>
+        <div class="pills" style="margin-top:10px;">
+          <button class="pill" data-val="thick" onclick="selectPill(this, 'hairType', 'hair')">Thick</button>
+          <button class="pill" data-val="thin" onclick="selectPill(this, 'hairType', 'hair')">Thin</button>
+          <button class="pill" data-val="frizzy" onclick="selectPill(this, 'hairType', 'hair')">Frizzy</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>2. Filter & Suggest</h2>
+      <p>The recommendation system will scan 15+ hairstyles to find a 100% match for your features.</p>
+      <div class="notice">Suggestions are scored based on face shape and hair type compatibility.</div>
+      <div class="btn-row"><button class="btn" onclick="submitSurvey('hair', 'hairResults')">See matching hairstyles ✦</button></div>
+    </div>
+  </div>
+  <section id="hairResults" class="result-area"></section>
+</main>
+</body></html>

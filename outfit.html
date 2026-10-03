@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LUMI Outfit</title><link rel="stylesheet" href="styles.css">
+<script src="data.js"></script>
+<script src="service.js"></script>
+<script src="app.js"></script>
+</head><body>
+<nav class="nav"><a class="logo" href="index.html">LUMI</a><div class="navlinks"><a href="index.html">Home</a><a href="hair.html">Hair</a><a href="face.html">Face</a><a class="active" href="outfit.html">Outfit</a><a href="body.html">Body</a><a href="explore.html">Explore</a></div></nav>
+<main class="container">
+  <div class="eyebrow">① Survey → ② Suggestions → ③ Tutorial</div>
+  <h1 style="margin-top:10px;">Fashion Style</h1>
+  <p>Choose the perfect outfit to flatter your figure.</p>
+  <div class="grid grid-2">
+    <div class="panel">
+      <h2>1. Features Survey</h2>
+      <div style="margin-bottom:20px;">
+        <strong>What is your body shape?</strong>
+        <div class="pills" style="margin-top:10px;">
+          <button class="pill" data-val="hourglass" onclick="selectPill(this, 'bodyShape', 'outfit')">Hourglass</button>
+          <button class="pill" data-val="rectangle" onclick="selectPill(this, 'bodyShape', 'outfit')">Rectangle</button>
+          <button class="pill" data-val="triangle" onclick="selectPill(this, 'bodyShape', 'outfit')">Triangle</button>
+        </div>
+      </div>
+      <div>
+        <strong>What is your favorite style?</strong>
+        <div class="pills" style="margin-top:10px;">
+          <button class="pill" data-val="elegant" onclick="selectPill(this, 'style', 'outfit')">Elegant</button>
+          <button class="pill" data-val="casual" onclick="selectPill(this, 'style', 'outfit')">Casual</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>2. Filter & Suggest</h2>
+      <p>The recommendation system will scan fashion data to find a 100% match for your features.</p>
+      <div class="btn-row"><button class="btn" onclick="submitSurvey('outfit', 'outfitResults')">See matching outfits ✦</button></div>
+    </div>
+  </div>
+  <section id="outfitResults" class="result-area"></section>
+</main>
+</body></html>
