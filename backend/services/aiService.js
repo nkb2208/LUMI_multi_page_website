@@ -101,7 +101,7 @@ CATALOGS:\n${catalogStr}`;
     const apiCallFn = async (apiKey) => {
         const ai = new GoogleGenAI({ apiKey: apiKey });
         const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
+            model: 'gemini-3.5-flash-lite',
             contents: [
                 { role: 'user', parts: [{ inlineData: { mimeType: imageMimeType, data: imageBase64 } }, { text: "Analyze this face." }] }
             ],
@@ -130,7 +130,7 @@ CATALOGS:\n${catalogStr}`;
     const apiCallFn = async (apiKey) => {
         const ai = new GoogleGenAI({ apiKey: apiKey });
         const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
+            model: 'gemini-3.5-flash-lite',
             contents: [
                 { role: 'user', parts: [{ inlineData: { mimeType: imageMimeType, data: imageBase64 } }, { text: "Analyze this body." }] }
             ],
@@ -210,7 +210,7 @@ CATALOGS:\n${catalogStr}`;
         }
 
         const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
+            model: 'gemini-3.5-flash-lite',
             contents: contents,
             config: {
                 systemInstruction: systemInstruction,
@@ -270,7 +270,7 @@ Do NOT invent items that are not in the pictures.`;
         });
 
         const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
+            model: 'gemini-3.5-flash-lite',
             contents: contents,
             config: {
                 systemInstruction: systemInstruction,
