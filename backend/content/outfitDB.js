@@ -5,7 +5,7 @@ const OUTFIT_DB = [
     description: "Elegant, gentle, yet professional Korean office style for women.",
     tags: ["office", "korean", "elegant", "asian"],
     imageUrl: "https://images2.thanhnien.vn/528068263637045248/2024/2/15/thoi-trang-cong-so8-1707978494595580799841.jpg",
-    fallbackImage: "",
+    fallbackImage: "https://images2.thanhnien.vn/528068263637045248/2024/2/15/thoi-trang-cong-so8-1707978494595580799841.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A delicate silk blouse or chiffon shirt with a bow tie collar." },
@@ -24,8 +24,8 @@ const OUTFIT_DB = [
     name: "Douyin Streetwear",
     description: "Cool and edgy street style that perfectly flatters the figure, inspired by Chinese Douyin fashion influencers.",
     tags: ["streetwear", "douyin", "cool", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/c2/74/f5/c274f52e3293b21fe8b274668b608eca.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/c2/74/f5/c274f52e3293b21fe8b274668b608eca.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A tight-fitting crop top or a tube top to show off the waist." },
@@ -45,8 +45,8 @@ const OUTFIT_DB = [
     name: "Japanese Soft Girl",
     description: "Sweet, cute, and highly feminine, drawing heavy inspiration from Japanese Mori Girl and Kawaii fashion.",
     tags: ["kawaii", "japanese", "cute", "soft", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1550614000-4b95d4ebee04?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/736x/01/a2/98/01a298b35b9e60be8e5a73da3e81727e.jpg",
+    fallbackImage: "https://i.pinimg.com/736x/01/a2/98/01a298b35b9e60be8e5a73da3e81727e.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A square-neck puff-sleeve top or a sailor-collar shirt with a ribbon." },
@@ -66,8 +66,8 @@ const OUTFIT_DB = [
     name: "Hong Kong Vintage 90s",
     description: "Classic, alluring, and nostalgic, inspired by the golden era of 90s Hong Kong cinema.",
     tags: ["vintage", "retro", "hongkong", "90s", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/52/9f/ed/529fedf62227b5574588a1d39c6d2a5b.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/52/9f/ed/529fedf62227b5574588a1d39c6d2a5b.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A vintage printed silk shirt or a dark red/black camisole." },
@@ -87,8 +87,8 @@ const OUTFIT_DB = [
     name: "Korean Minimalist",
     description: "Minimalist and comfortable, yet incredibly sophisticated and refined, capturing the essence of Korean aesthetics.",
     tags: ["minimalist", "korean", "casual", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1434389678232-04ce6ca45281?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/736x/5c/23/38/5c23388d0ea67fd64578f769798d0862.jpg",
+    fallbackImage: "https://i.pinimg.com/736x/5c/23/38/5c23388d0ea67fd64578f769798d0862.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A basic solid t-shirt or a slim-fit thin sweater." },
@@ -108,8 +108,8 @@ const OUTFIT_DB = [
     name: "Asian Campus Preppy",
     description: "Dynamic and youthful, bearing the signature hallmark of the Asian schoolgirl aesthetic.",
     tags: ["campus", "preppy", "youth", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/f5/4c/b7/f54cb74bcb151c497139aea26ec00f58.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/f5/4c/b7/f54cb74bcb151c497139aea26ec00f58.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A short-sleeve white shirt layered with a thin knit sweater vest." },
@@ -129,8 +129,8 @@ const OUTFIT_DB = [
     name: "Kpop Idol Y2K",
     description: "Rebellious, bold, and trendy, heavily inspired by the stage outfits of K-pop girl groups.",
     tags: ["kpop", "y2k", "trendy", "idol", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1475178626620-a4d074967452?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/20/0c/c1/200cc122b0e7adefc49dc4fc2ac8dd72.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/20/0c/c1/200cc122b0e7adefc49dc4fc2ac8dd72.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A colorful printed baby tee or a rhinestone-studded corset top." },
@@ -150,8 +150,8 @@ const OUTFIT_DB = [
     name: "Modern Ao Dai / Yem",
     description: "A graceful, traditional beauty that has been modernized to reflect the free-spirited modern Vietnamese woman.",
     tags: ["vietnam", "traditional", "modern", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1515347619152-16e45139031a?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/b3/8c/22/b38c225a9d215153869e59ad8c9d306d.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/b3/8c/22/b38c225a9d215153869e59ad8c9d306d.jpg",
     tutorial: {
       steps: [
         { title: "Top", desc: "A modernized silk halter top (Yếm) or a loose-fitting short-sleeve Ao Dai." },
@@ -171,8 +171,8 @@ const OUTFIT_DB = [
     name: "Asian Heiress (Chaebol)",
     description: "The luxurious, haughty, and elegant style typically associated with wealthy Chaebol heiresses in Korea and China.",
     tags: ["heiress", "elegant", "luxurious", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1566206091558-f62683393963?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/1200x/57/43/2c/57432cb1a357d7559021eba7609502b2.jpg",
+    fallbackImage: "https://i.pinimg.com/1200x/57/43/2c/57432cb1a357d7559021eba7609502b2.jpg",
     tutorial: {
       steps: [
         { title: "Outfit", desc: "A matching tweed jacket and skirt set in white, black, or pastel tones." },
@@ -192,8 +192,8 @@ const OUTFIT_DB = [
     name: "Feminine Floral Muse",
     description: "Sweet, fragile, and poetic like morning dew. Highly popular for cafe hopping and casual strolls across Asia.",
     tags: ["floral", "feminine", "muse", "asian"],
-    imageUrl: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600&auto=format&fit=crop",
-    fallbackImage: "",
+    imageUrl: "https://i.pinimg.com/736x/87/14/3c/87143cd86a02392fd695a3cc45714183.jpg",
+    fallbackImage: "https://i.pinimg.com/736x/87/14/3c/87143cd86a02392fd695a3cc45714183.jpg",
     tutorial: {
       steps: [
         { title: "Dress", desc: "A flowy silk or chiffon maxi dress with delicate floral prints." },
