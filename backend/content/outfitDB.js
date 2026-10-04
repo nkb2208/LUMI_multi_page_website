@@ -1,4 +1,4 @@
-const OUTFIT_DB = [
+﻿const OUTFIT_DB = [
   {
     id: "outfit_001",
     name: "Chic Office Outfit",
@@ -11,10 +11,14 @@ const OUTFIT_DB = [
         { title: "Top", desc: "Wear a structured blazer." },
         { title: "Bottom", desc: "Pair with tailored wide-leg trousers." }
       ],
-      videoId: "RcOgnCde8NU",
-      sourceName: "YouTube"
+      
+      products: [
+        { name: "Blazer đen", purchaseLink: "https://shopee.vn/search?keyword=blazer%20den" },
+        { name: "Quần ống rộng", purchaseLink: "https://shopee.vn/search?keyword=quan%20ong%20rong" }
+      ]
     }
   }
 ];
 
 module.exports = OUTFIT_DB;
+

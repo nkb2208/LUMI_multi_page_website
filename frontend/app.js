@@ -189,20 +189,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error(error);
-            let userMsg = "KhÃ´ng thá»ƒ káº¿t ná»‘i Ä‘áº¿n mÃ¡y chá»§. Vui lÃ²ng thá»­ láº¡i sau.";
+            let userMsg = "Không thể kết nối đến máy chủ. Vui lòng thử lại sau.";
             if (error.name === 'SyntaxError') {
-                userMsg = "MÃ¡y chá»§ tráº£ vá» dá»¯ liá»‡u khÃ´ng há»£p lá»‡. Vui lÃ²ng thá»­ láº¡i sau.";
+                userMsg = "Máy chủ trả về dữ liệu không hợp lệ. Vui lòng thử lại sau.";
             } else if (error.message.includes("429")) {
-                userMsg = "Há»‡ thá»‘ng Ä‘ang quÃ¡ táº£i, vui lÃ²ng chá» má»™t lÃ¡t rá»“i thá»­ láº¡i.";
+                userMsg = "Hệ thống đang quá tải, vui lòng chờ một lát rồi thử lại.";
             } else if (error.message) {
-                // Ensure no secrets are leaked in error message
-                userMsg = error.message.replace(/AIza[a-zA-Z0-9_\\-]+/g, "[HIDDEN]");
+                userMsg = error.message.replace(/AIza[a-zA-Z0-9_\-]+/g, "[HIDDEN]");
             }
-            
             if (resultsArea) {
-                resultsArea.innerHTML = `<p style="text-align:center; color:red; padding: 20px;">Lá»—i: ${userMsg}</p>`;
+                resultsArea.innerHTML = `<p style="text-align:center; color:red; padding: 20px;">Lỗi: ${userMsg}</p>`;
             }
-            alert(`LUMI gáº·p sá»± cá»‘: ${userMsg}`);
+            alert(`LUMI gặp sự cố: ${userMsg}`);
         }
     };
 });
