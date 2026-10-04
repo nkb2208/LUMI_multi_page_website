@@ -377,3 +377,5 @@ const MOCK_EXTRAS = [
 ];
 
 CONTENT_DATABASE.push(...MOCK_EXTRAS);
+
+module.exports = { CONTENT_DATABASE };

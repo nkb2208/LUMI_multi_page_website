@@ -65,3 +65,42 @@ footer{padding:28px 5vw;border-top:1px solid var(--line);color:var(--muted);font
  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
  .container{padding:35px 18px 65px}
 }
+
+.upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.upload-area {
+  border: 2px dashed #d8b4a8;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.upload-area:hover, .upload-area.dragover {
+  background: #f0e6e3;
+  border-color: #c4998b;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d8b4a8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
