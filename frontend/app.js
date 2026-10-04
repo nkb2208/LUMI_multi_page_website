@@ -330,6 +330,7 @@ function initTutorial() {
     const productsContainer = document.getElementById('t-products');
     
     if (productsPanel && productsContainer) {
+        console.log('Rendering products for', cat, data.tutorial.products);
         if (data.tutorial && data.tutorial.products && data.tutorial.products.length > 0) {
             productsPanel.style.display = 'block';
             productsContainer.innerHTML = data.tutorial.products.map(p => `
