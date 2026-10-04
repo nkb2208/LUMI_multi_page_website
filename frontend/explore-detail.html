@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>LUMI Complete Look</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="exploreDB.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
 <nav class="nav">
@@ -59,36 +59,42 @@
 </main>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const lookId = urlParams.get('look') || 'soft'; // fallback
+    const lookId = urlParams.get('look') || 'soft';
     
-    if (typeof EXPLORE_DB !== 'undefined') {
-        const data = EXPLORE_DB.find(d => d.id === lookId) || EXPLORE_DB[0];
+    try {
+        const res = await fetch(`${BACKEND_URL}/api/explore`);
+        if (!res.ok) throw new Error("Failed to load");
+        const exploreData = await res.json();
+        
+        const data = exploreData.find(d => d.id === lookId) || exploreData[0];
         
         document.getElementById('ed-title').textContent = data.title;
         const imgBox = document.getElementById('ed-image');
         imgBox.textContent = data.lookImageText;
-        imgBox.style.background = `url('${data.imageUrl}') center/cover`;
+        imgBox.style.background = \`url('\${data.imageUrl}') center/cover\`;
         
-        document.getElementById('ed-hair-desc').innerHTML = `<b>${data.components.hair.name}</b> · ${data.components.hair.desc}`;
-        document.getElementById('ed-hair-link').href = `tutorial.html?id=${data.components.hair.id}&category=hair`;
+        document.getElementById('ed-hair-desc').innerHTML = \`<b>\${data.components.hair.name}</b> · \${data.components.hair.desc}\`;
+        document.getElementById('ed-hair-link').href = \`tutorial.html?id=\${data.components.hair.id}&category=hair\`;
         
-        document.getElementById('ed-makeup-desc').innerHTML = `<b>${data.components.makeup.name}</b> · ${data.components.makeup.desc}`;
-        document.getElementById('ed-makeup-link').href = `tutorial.html?id=${data.components.makeup.id}&category=makeup`;
+        document.getElementById('ed-makeup-desc').innerHTML = \`<b>\${data.components.makeup.name}</b> · \${data.components.makeup.desc}\`;
+        document.getElementById('ed-makeup-link').href = \`tutorial.html?id=\${data.components.makeup.id}&category=makeup\`;
         
-        document.getElementById('ed-outfit-desc').innerHTML = `<b>${data.components.outfit.name}</b> · ${data.components.outfit.desc}`;
-        document.getElementById('ed-outfit-link').href = `tutorial.html?id=${data.components.outfit.id}&category=outfit`;
+        document.getElementById('ed-outfit-desc').innerHTML = \`<b>\${data.components.outfit.name}</b> · \${data.components.outfit.desc}\`;
+        document.getElementById('ed-outfit-link').href = \`tutorial.html?id=\${data.components.outfit.id}&category=outfit\`;
         
         const productsContainer = document.getElementById('ed-products');
-        productsContainer.innerHTML = data.products.map(p => `
+        productsContainer.innerHTML = data.products.map(p => \`
             <div class="card">
-                <h3>${p.name}</h3>
-                <p class="price">${p.price}</p>
-                <a class="btn outline" style="text-decoration:none; display:inline-block; margin-top:10px;" href="${p.shopee}" target="_blank">Shopee</a>
-                <a class="btn outline" style="text-decoration:none; display:inline-block; margin-top:10px;" href="${p.tiktok}" target="_blank">TikTok Shop</a>
+                <h3>\${p.name}</h3>
+                <p class="price">\${p.price}</p>
+                <a class="btn outline" style="text-decoration:none; display:inline-block; margin-top:10px;" href="\${p.shopee}" target="_blank">Shopee</a>
+                <a class="btn outline" style="text-decoration:none; display:inline-block; margin-top:10px;" href="\${p.tiktok}" target="_blank">TikTok Shop</a>
             </div>
-        `).join('');
+        \`).join('');
+    } catch(e) {
+        console.error("Error loading explore detail:", e);
     }
 });
 </script>
