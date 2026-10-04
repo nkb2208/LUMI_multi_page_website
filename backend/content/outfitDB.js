@@ -2,209 +2,209 @@ const OUTFIT_DB = [
   {
     id: "outfit_001",
     name: "Korean Office Chic",
-    description: "Phong cách công sở Hàn Quốc thanh lịch, nhẹ nhàng nhưng không kém phần chuyên nghiệp dành cho phái nữ.",
+    description: "Elegant, gentle, yet professional Korean office style for women.",
     tags: ["office", "korean", "elegant", "asian"],
     imageUrl: "https://images2.thanhnien.vn/528068263637045248/2024/2/15/thoi-trang-cong-so8-1707978494595580799841.jpg",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo blouse lụa hoặc sơ mi voan cổ nơ điệu đà." },
-        { title: "Bottom", desc: "Chân váy chữ A dáng dài hoặc quần âu cạp cao." },
-        { title: "Shoes", desc: "Giày búp bê mũi nhọn hoặc giày cao gót gót vuông 3-5cm." }
+        { title: "Top", desc: "A delicate silk blouse or chiffon shirt with a bow tie collar." },
+        { title: "Bottom", desc: "A long A-line skirt or high-waisted tailored trousers." },
+        { title: "Shoes", desc: "Pointed-toe flats or block heels (3-5cm)." }
       ],
       products: [
-        { name: "Áo blouse lụa", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20blouse%20n%E1%BB%AF%20c%C3%B4ng%20s%E1%BB%9F" },
-        { name: "Chân váy chữ A", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20ch%E1%BB%AF%20A%20d%C3%A1ng%20d%C3%A0i" },
-        { name: "Giày mũi nhọn", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20b%C3%BAp%20b%C3%AA%20m%C5%A9i%20nh%E1%BB%8Dn" }
+        { name: "Silk Blouse", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20blouse%20n%E1%BB%AF%20c%C3%B4ng%20s%E1%BB%9F" },
+        { name: "A-line Skirt", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20ch%E1%BB%AF%20A%20d%C3%A1ng%20d%C3%A0i" },
+        { name: "Pointed Heels", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20b%C3%BAp%20b%C3%AA%20m%C5%A9i%20nh%E1%BB%8Dn" }
       ]
     }
   },
   {
     id: "outfit_002",
-    name: "Douyin Streetwear (Tỉ tỉ Trung Quốc)",
-    description: "Phong cách đường phố cực ngầu, tôn dáng chuẩn 'tỉ tỉ Douyin' xứ Trung.",
+    name: "Douyin Streetwear",
+    description: "Cool and edgy street style that perfectly flatters the figure, inspired by Chinese Douyin fashion influencers.",
     tags: ["streetwear", "douyin", "cool", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo croptop ôm sát hoặc áo ống khoe eo thon." },
-        { title: "Bottom", desc: "Quần ống rộng cạp trễ (parachute pants) hoặc quần túi hộp." },
-        { title: "Outer", desc: "Khoác hờ áo sơ mi form rộng hoặc áo khoác croptop bên ngoài." },
-        { title: "Shoes", desc: "Giày thể thao đế bánh mì (chunky sneakers) giúp ăn gian chiều cao." }
+        { title: "Top", desc: "A tight-fitting crop top or a tube top to show off the waist." },
+        { title: "Bottom", desc: "Low-rise wide-leg parachute pants or cargo pants." },
+        { title: "Outer", desc: "Layer with an oversized unbuttoned shirt or a cropped jacket." },
+        { title: "Shoes", desc: "Chunky platform sneakers to boost height." }
       ],
       products: [
-        { name: "Áo croptop ôm", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20croptop%20%C3%B4m" },
-        { name: "Quần parachute", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20parachute%20n%E1%BB%AF" },
-        { name: "Giày Chunky", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20chunky%20n%E1%BB%AF" }
+        { name: "Tight Crop Top", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20croptop%20%C3%B4m" },
+        { name: "Parachute Pants", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20parachute%20n%E1%BB%AF" },
+        { name: "Chunky Sneakers", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20chunky%20n%E1%BB%AF" }
       ]
     }
   },
   {
     id: "outfit_003",
-    name: "Japanese Soft Girl (Kawaii)",
-    description: "Đáng yêu, ngọt ngào và nữ tính mang đậm hơi hướng thời trang Nhật Bản (Mori girl / Kawaii).",
+    name: "Japanese Soft Girl",
+    description: "Sweet, cute, and highly feminine, drawing heavy inspiration from Japanese Mori Girl and Kawaii fashion.",
     tags: ["kawaii", "japanese", "cute", "soft", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1550614000-4b95d4ebee04?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo tay bồng cổ vuông hoặc áo sơ mi thủy thủ cài nơ." },
-        { title: "Outer", desc: "Cardigan len mỏng màu pastel nữ tính." },
-        { title: "Bottom", desc: "Chân váy xòe xếp ly hoặc váy voan nhiều lớp." },
-        { title: "Shoes", desc: "Giày búp bê Mary Jane mang cùng tất cổ cao bèo nhún." }
+        { title: "Top", desc: "A square-neck puff-sleeve top or a sailor-collar shirt with a ribbon." },
+        { title: "Outer", desc: "A thin, pastel-colored knitted cardigan." },
+        { title: "Bottom", desc: "A pleated mini skirt or a multi-layered chiffon skirt." },
+        { title: "Shoes", desc: "Mary Jane shoes paired with ruffled ankle socks." }
       ],
       products: [
-        { name: "Áo tay bồng", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20tay%20b%E1%BB%93ng%20ti%E1%BB%83u%20th%C6%B0" },
-        { name: "Cardigan len mỏng", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20cardigan%20m%E1%BB%8Fng%20n%E1%BB%AF" },
-        { name: "Giày Mary Jane", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20mary%20jane%20n%E1%BB%AF" }
+        { name: "Puff Sleeve Top", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20tay%20b%E1%BB%93ng%20ti%E1%BB%83u%20th%C6%B0" },
+        { name: "Pastel Cardigan", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20cardigan%20m%E1%BB%8Fng%20n%E1%BB%AF" },
+        { name: "Mary Jane Shoes", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20mary%20jane%20n%E1%BB%AF" }
       ]
     }
   },
   {
     id: "outfit_004",
     name: "Hong Kong Vintage 90s",
-    description: "Cổ điển, quyến rũ và mặn mà theo phong cách điện ảnh Hồng Kông thập niên 90.",
+    description: "Classic, alluring, and nostalgic, inspired by the golden era of 90s Hong Kong cinema.",
     tags: ["vintage", "retro", "hongkong", "90s", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo sơ mi lụa họa tiết vintage hoặc áo hai dây màu đỏ đô/đen." },
-        { title: "Bottom", desc: "Quần jeans cạp cao ống loe (flare jeans)." },
-        { title: "Accessories", desc: "Thắt lưng da bản to, son môi đỏ đậm và khuyên tai tròn." },
-        { title: "Shoes", desc: "Giày boot da lộn mũi vuông cổ ngắn." }
+        { title: "Top", desc: "A vintage printed silk shirt or a dark red/black camisole." },
+        { title: "Bottom", desc: "High-waisted vintage flare jeans." },
+        { title: "Accessories", desc: "A wide leather belt, bold red lipstick, and hoop earrings." },
+        { title: "Shoes", desc: "Square-toe suede ankle boots." }
       ],
       products: [
-        { name: "Áo hai dây đỏ đô", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20hai%20d%C3%A2y%20l%E1%BB%A5a%20%C4%91%E1%BB%8F" },
-        { name: "Quần ống loe", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20jeans%20%E1%BB%91ng%20loe%20l%C6%B0ng%20cao" },
-        { name: "Boot mũi vuông", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20boot%20n%E1%BB%AF%20m%C5%A9i%20vu%C3%B4ng" }
+        { name: "Red Silk Camisole", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20hai%20d%C3%A2y%20l%E1%BB%A5a%20%C4%91%E1%BB%8F" },
+        { name: "Flare Jeans", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20jeans%20%E1%BB%91ng%20loe%20l%C6%B0ng%20cao" },
+        { name: "Square-toe Boots", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20boot%20n%E1%BB%AF%20m%C5%A9i%20vu%C3%B4ng" }
       ]
     }
   },
   {
     id: "outfit_005",
     name: "Korean Minimalist",
-    description: "Tối giản, thoải mái nhưng vô cùng sang trọng, tinh tế chuẩn phong cách Hàn Quốc.",
+    description: "Minimalist and comfortable, yet incredibly sophisticated and refined, capturing the essence of Korean aesthetics.",
     tags: ["minimalist", "korean", "casual", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1434389678232-04ce6ca45281?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo thun trơn basic hoặc áo len mỏng ôm sát." },
-        { title: "Outer", desc: "Áo khoác blazer form rộng (oversized) tone màu beige/nâu." },
-        { title: "Bottom", desc: "Quần tây ống suông hoặc quần jeans xanh nhạt dáng đứng." },
-        { title: "Shoes", desc: "Giày loafer hoặc sneaker trắng basic." }
+        { title: "Top", desc: "A basic solid t-shirt or a slim-fit thin sweater." },
+        { title: "Outer", desc: "An oversized blazer in neutral tones like beige or brown." },
+        { title: "Bottom", desc: "Straight-leg tailored trousers or light blue straight-leg jeans." },
+        { title: "Shoes", desc: "Classic loafers or basic white sneakers." }
       ],
       products: [
-        { name: "Blazer dáng rộng", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20blazer%20n%E1%BB%AF%20form%20r%E1%BB%99ng" },
-        { name: "Quần âu suông", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20t%C3%A2y%20n%E1%BB%AF%20%E1%BB%91ng%20su%C3%B4ng" },
-        { name: "Giày Loafer", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20loafer%20n%E1%BB%AF" }
+        { name: "Oversized Blazer", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20blazer%20n%E1%BB%AF%20form%20r%E1%BB%99ng" },
+        { name: "Tailored Trousers", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20t%C3%A2y%20n%E1%BB%AF%20%E1%BB%91ng%20su%C3%B4ng" },
+        { name: "Loafer Shoes", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20loafer%20n%E1%BB%AF" }
       ]
     }
   },
   {
     id: "outfit_006",
-    name: "Asian Campus / Preppy",
-    description: "Năng động, tươi trẻ mang đậm dấu ấn học đường nữ sinh châu Á.",
+    name: "Asian Campus Preppy",
+    description: "Dynamic and youthful, bearing the signature hallmark of the Asian schoolgirl aesthetic.",
     tags: ["campus", "preppy", "youth", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo sơ mi trắng tay ngắn phối cùng áo gile len mỏng bên ngoài." },
-        { title: "Bottom", desc: "Chân váy xếp ly dáng ngắn (chân váy tennis)." },
-        { title: "Accessories", desc: "Túi xách tote canvas hoặc balo mini." },
-        { title: "Shoes", desc: "Giày Oxford nữ phối với tất trắng viền cổ." }
+        { title: "Top", desc: "A short-sleeve white shirt layered with a thin knit sweater vest." },
+        { title: "Bottom", desc: "A short pleated skirt (tennis skirt)." },
+        { title: "Accessories", desc: "A canvas tote bag or a mini backpack." },
+        { title: "Shoes", desc: "Women's Oxford shoes paired with white ankle socks." }
       ],
       products: [
-        { name: "Áo gile len", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20gile%20len%20n%E1%BB%AF" },
-        { name: "Chân váy tennis", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20tennis" },
-        { name: "Giày Oxford", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20oxford%20n%E1%BB%AF" }
+        { name: "Knit Sweater Vest", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20gile%20len%20n%E1%BB%AF" },
+        { name: "Tennis Skirt", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20tennis" },
+        { name: "Oxford Shoes", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20oxford%20n%E1%BB%AF" }
       ]
     }
   },
   {
     id: "outfit_007",
     name: "Kpop Idol Y2K",
-    description: "Phá cách, táo bạo và trendy lấy cảm hứng từ thời trang trình diễn của các nhóm nhạc nữ Kpop.",
+    description: "Rebellious, bold, and trendy, heavily inspired by the stage outfits of K-pop girl groups.",
     tags: ["kpop", "y2k", "trendy", "idol", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1475178626620-a4d074967452?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo baby tee ngắn in họa tiết sặc sỡ hoặc corset top đính đá." },
-        { title: "Bottom", desc: "Chân váy denim siêu ngắn (mini skirt) xếp ly." },
-        { title: "Accessories", desc: "Thắt lưng kim loại đôi, kẹp tóc cánh bướm và tất ống chân (leg warmers)." },
-        { title: "Shoes", desc: "Giày boot cao cổ hoặc giày platform siêu cao." }
+        { title: "Top", desc: "A colorful printed baby tee or a rhinestone-studded corset top." },
+        { title: "Bottom", desc: "A pleated denim micro-mini skirt." },
+        { title: "Accessories", desc: "A double-chain metal belt, butterfly hair clips, and leg warmers." },
+        { title: "Shoes", desc: "High-top combat boots or ultra-high platform shoes." }
       ],
       products: [
-        { name: "Áo baby tee Y2K", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20baby%20tee%20y2k" },
-        { name: "Chân váy jean mini", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20jean%20mini" },
-        { name: "Tất ống chân", purchaseLink: "https://shopee.vn/search?keyword=t%E1%BA%A5t%20%E1%BB%91ng%20ch%C3%A2n%20y2k" }
+        { name: "Y2K Baby Tee", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20baby%20tee%20y2k" },
+        { name: "Denim Mini Skirt", purchaseLink: "https://shopee.vn/search?keyword=ch%C3%A2n%20v%C3%A1y%20jean%20mini" },
+        { name: "Leg Warmers", purchaseLink: "https://shopee.vn/search?keyword=t%E1%BA%A5t%20%E1%BB%91ng%20ch%C3%A2n%20y2k" }
       ]
     }
   },
   {
     id: "outfit_008",
-    name: "Vietnamese Modern Áo Dài / Yếm",
-    description: "Vẻ đẹp đằm thắm, truyền thống nhưng được cách tân hiện đại, phóng khoáng của phụ nữ Việt.",
+    name: "Modern Ao Dai / Yem",
+    description: "A graceful, traditional beauty that has been modernized to reflect the free-spirited modern Vietnamese woman.",
     tags: ["vietnam", "traditional", "modern", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1515347619152-16e45139031a?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Top", desc: "Áo yếm lụa tơ tằm cách tân hoặc áo dài dáng suông tay lỡ." },
-        { title: "Bottom", desc: "Quần lụa ống rộng thướt tha mềm mại." },
-        { title: "Accessories", desc: "Túi mây tre đan hoặc khuyên tai ngọc trai nhỏ." },
-        { title: "Shoes", desc: "Guốc mộc cách tân hoặc sandal quai mảnh (mule)." }
+        { title: "Top", desc: "A modernized silk halter top (Yếm) or a loose-fitting short-sleeve Ao Dai." },
+        { title: "Bottom", desc: "Flowy, soft, wide-leg silk trousers." },
+        { title: "Accessories", desc: "A woven rattan bag or small pearl earrings." },
+        { title: "Shoes", desc: "Modern wooden clogs or delicate strappy mules." }
       ],
       products: [
-        { name: "Áo yếm lụa", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20y%E1%BA%BFm%20l%E1%BB%A5a%20c%C3%A1ch%20t%C3%A2n" },
-        { name: "Quần lụa ống rộng", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20l%E1%BB%A5a%20%E1%BB%91ng%20r%E1%BB%99ng%20n%E1%BB%AF" },
-        { name: "Guốc cao gót", purchaseLink: "https://shopee.vn/search?keyword=gu%E1%BB%91c%20n%E1%BB%AF" }
+        { name: "Modern Silk Yếm", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20y%E1%BA%BFm%20l%E1%BB%A5a%20c%C3%A1ch%20t%C3%A2n" },
+        { name: "Wide-leg Silk Pants", purchaseLink: "https://shopee.vn/search?keyword=qu%E1%BA%A7n%20l%E1%BB%A5a%20%E1%BB%91ng%20r%E1%BB%99ng%20n%E1%BB%AF" },
+        { name: "Mules / Clogs", purchaseLink: "https://shopee.vn/search?keyword=gu%E1%BB%91c%20n%E1%BB%AF" }
       ]
     }
   },
   {
     id: "outfit_009",
-    name: "Asian Heiress (Chaebol / Tiểu thư)",
-    description: "Phong cách sang chảnh, kiêu kỳ của các thiên kim tiểu thư (Chaebol) Hàn - Trung.",
+    name: "Asian Heiress (Chaebol)",
+    description: "The luxurious, haughty, and elegant style typically associated with wealthy Chaebol heiresses in Korea and China.",
     tags: ["heiress", "elegant", "luxurious", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1566206091558-f62683393963?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Outfit", desc: "Set váy áo dạ tweed tone màu trắng, đen hoặc pastel." },
-        { title: "Outer", desc: "Khoác hờ áo dạ cape mỏng ngang vai." },
-        { title: "Accessories", desc: "Nơ cài tóc bản to bằng nhung đen và chuỗi vòng ngọc trai." },
-        { title: "Shoes", desc: "Giày cao gót bít mũi đính đá hoặc mũi nhọn slingback." }
+        { title: "Outfit", desc: "A matching tweed jacket and skirt set in white, black, or pastel tones." },
+        { title: "Outer", desc: "Drape a thin cape coat elegantly over the shoulders." },
+        { title: "Accessories", desc: "A large black velvet hair bow and a classic pearl necklace." },
+        { title: "Shoes", desc: "Rhinestone-embellished pumps or pointed-toe slingbacks." }
       ],
       products: [
-        { name: "Set dạ Tweed", purchaseLink: "https://shopee.vn/search?keyword=set%20d%E1%BA%A1%20tweed%20n%E1%BB%AF" },
-        { name: "Nơ cài tóc nhung", purchaseLink: "https://shopee.vn/search?keyword=k%E1%BA%B9p%20t%C3%B3c%20n%C6%A1%20nhung" },
-        { name: "Vòng ngọc trai", purchaseLink: "https://shopee.vn/search?keyword=v%C3%B2ng%20c%E1%BB%95%20ng%E1%BB%8Dc%20trai" }
+        { name: "Tweed Set", purchaseLink: "https://shopee.vn/search?keyword=set%20d%E1%BA%A1%20tweed%20n%E1%BB%AF" },
+        { name: "Velvet Hair Bow", purchaseLink: "https://shopee.vn/search?keyword=k%E1%BA%B9p%20t%C3%B3c%20n%C6%A1%20nhung" },
+        { name: "Pearl Necklace", purchaseLink: "https://shopee.vn/search?keyword=v%C3%B2ng%20c%E1%BB%95%20ng%E1%BB%8Dc%20trai" }
       ]
     }
   },
   {
     id: "outfit_010",
-    name: "Feminine Floral / Nàng Thơ",
-    description: "Ngọt ngào, mong manh như sương sớm, rất được yêu thích tại các quán cafe châu Á.",
+    name: "Feminine Floral Muse",
+    description: "Sweet, fragile, and poetic like morning dew. Highly popular for cafe hopping and casual strolls across Asia.",
     tags: ["floral", "feminine", "muse", "asian"],
     imageUrl: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600&auto=format&fit=crop",
     fallbackImage: "",
     tutorial: {
       steps: [
-        { title: "Dress", desc: "Váy lụa hoặc voan hai dây dáng xòe dài in họa tiết hoa nhí." },
-        { title: "Outer", desc: "Áo sơ mi linen khoác nhẹ bên ngoài tránh nắng." },
-        { title: "Accessories", desc: "Mũ cói điệu đà và giỏ xách lưới." },
-        { title: "Shoes", desc: "Giày đế bệt (flat shoes) hoặc sandal thắt dây." }
+        { title: "Dress", desc: "A flowy silk or chiffon maxi dress with delicate floral prints." },
+        { title: "Outer", desc: "A light linen shirt thrown over to protect from the sun." },
+        { title: "Accessories", desc: "A feminine straw hat and a mesh tote bag." },
+        { title: "Shoes", desc: "Comfortable flat shoes or strappy sandals." }
       ],
       products: [
-        { name: "Váy lụa hoa nhí", purchaseLink: "https://shopee.vn/search?keyword=v%C3%A1y%20hoa%20nh%C3%AD%20d%C3%A1ng%20d%C3%A0i" },
-        { name: "Áo khoác linen", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20s%C6%A1%20mi%20linen%20n%E1%BB%AF" },
-        { name: "Giày bệt", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20b%E1%BA%B9t%20n%E1%BB%AF" }
+        { name: "Floral Maxi Dress", purchaseLink: "https://shopee.vn/search?keyword=v%C3%A1y%20hoa%20nh%C3%AD%20d%C3%A1ng%20d%C3%A0i" },
+        { name: "Linen Shirt", purchaseLink: "https://shopee.vn/search?keyword=%C3%A1o%20s%C6%A1%20mi%20linen%20n%E1%BB%AF" },
+        { name: "Flat Shoes", purchaseLink: "https://shopee.vn/search?keyword=gi%C3%A0y%20b%E1%BA%B9t%20n%E1%BB%AF" }
       ]
     }
   }
