@@ -226,32 +226,36 @@ CATALOGS:\n${catalogStr}`;
 }
 
 
-const analyzeWardrobeItemsSchema = {
+
+const wardrobeDBSchema = {
     type: Type.OBJECT,
     properties: {
-        items: {
+        recommendations: {
             type: Type.ARRAY,
             items: {
                 type: Type.OBJECT,
                 properties: {
-                    id: { type: Type.STRING },
-                    name: { type: Type.STRING },
-                    category: { type: Type.STRING },
-                    color: { type: Type.ARRAY, items: { type: Type.STRING } }
+                    id: { type: Type.STRING, description: 'Must exactly match an ID from the outfit CATALOG' },
+                    whyItSuitsUser: { type: Type.STRING, description: 'Explain how the user\'s uploaded items fit this outfit.' }
                 },
-                required: ["id", "name", "category", "color"]
+                required: ['id', 'whyItSuitsUser']
             }
         }
     },
-    required: ["items"]
+    required: ['recommendations']
 };
 
-async function analyzeWardrobeItems(images) {
-    const systemInstruction = `You are an expert fashion AI. I am providing you with multiple images of my clothing items.
-Analyze them and extract a list of items. 
-Each item must have a unique ID (e.g. item_001), a descriptive name, a category (e.g., top, bottom, outerwear, shoes, accessory), and an array of colors.
-Return exactly one item per image provided.
-If an image contains multiple items, extract the main one.`;
+async function analyzeWardrobeDb(images) {
+    const catalogStr = 'OUTFIT CATALOG:\n' + buildCatalogString(OUTFIT_DB);
+    const systemInstruction = `You are an expert fashion stylist. The user has uploaded images of their clothing items.
+1. Identify the items the user uploaded (e.g., white shirt, black trousers).
+2. Look at the OUTFIT CATALOG provided below.
+3. Select 3-6 outfits from the catalog that best utilize or match the vibe of the user's uploaded items.
+4. Return the exact IDs of your selected outfits and explain why they fit the user's items.
+DO NOT invent IDs. ONLY use IDs from the catalog.
+
+CATALOGS:
+${catalogStr}`;
 
     const apiCallFn = async (apiKey) => {
         const ai = new GoogleGenAI({ apiKey: apiKey });
@@ -259,7 +263,7 @@ If an image contains multiple items, extract the main one.`;
         const contents = [{
             role: 'user',
             parts: [
-                { text: "Here are the images of my wardrobe items." }
+                { text: 'Here are the images of my wardrobe items. Please recommend outfits from the catalog.' }
             ]
         }];
         
@@ -274,79 +278,12 @@ If an image contains multiple items, extract the main one.`;
             contents: contents,
             config: {
                 systemInstruction: systemInstruction,
-                responseMimeType: "application/json",
-                responseSchema: analyzeWardrobeItemsSchema,
-                temperature: 0.1
-            }
-        });
-        
-        let result = JSON.parse(response.text);
-        
-        // Ensure the items correlate back to the images by injecting a frontend index mapping
-        if (result.items && result.items.length === images.length) {
-            result.items = result.items.map((item, index) => ({
-                ...item,
-                imageIndex: index
-            }));
-        }
-        
-        return result;
-    };
-
-    return await apiKeyManager.executeWithRetry(apiCallFn);
-}
-
-const recommendWardrobeOutfitsSchema = {
-    type: Type.OBJECT,
-    properties: {
-        outfits: {
-            type: Type.ARRAY,
-            items: {
-                type: Type.OBJECT,
-                properties: {
-                    id: { type: Type.STRING },
-                    name: { type: Type.STRING },
-                    itemIds: { 
-                        type: Type.ARRAY, 
-                        items: { type: Type.STRING }
-                    },
-                    reason: { type: Type.STRING },
-                    stylingTips: { type: Type.ARRAY, items: { type: Type.STRING } }
-                },
-                required: ["id", "name", "itemIds", "reason", "stylingTips"]
-            }
-        }
-    },
-    required: ["outfits"]
-};
-
-async function recommendWardrobeOutfits(items, style, occasion, numberOfOutfits) {
-    const itemsJson = JSON.stringify(items, null, 2);
-    const systemInstruction = `You are an expert fashion stylist.
-You are given a list of wardrobe items with their IDs, names, categories, and colors.
-Your task is to create ${numberOfOutfits} stylish outfits using ONLY these items.
-DO NOT invent, hallucinate, or add any items that are not in the list.
-Each outfit must include the 'itemIds' array containing the exact IDs of the items used.
-Style requested: ${style || 'Any'}
-Occasion requested: ${occasion || 'Daily'}
-
-Wardrobe Inventory:
-${itemsJson}
-`;
-
-    const apiCallFn = async (apiKey) => {
-        const ai = new GoogleGenAI({ apiKey: apiKey });
-        
-        const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash-lite',
-            contents: [{ role: 'user', parts: [{ text: "Please generate the outfits." }] }],
-            config: {
-                systemInstruction: systemInstruction,
-                responseMimeType: "application/json",
-                responseSchema: recommendWardrobeOutfitsSchema,
+                responseMimeType: 'application/json',
+                responseSchema: wardrobeDBSchema,
                 temperature: 0.6
             }
         });
+        
         return JSON.parse(response.text);
     };
 
@@ -357,6 +294,5 @@ module.exports = {
     analyzeFace,
     analyzeBody,
     recommendSkincare,
-    analyzeWardrobeItems,
-    recommendWardrobeOutfits
+    analyzeWardrobeDb
 };

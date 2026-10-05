@@ -564,6 +564,7 @@ function renderWardrobePreview() {
     });
 }
 
+
 window.analyzeWardrobe = async function() {
     if (wardrobeFiles.length === 0) {
         alert('Please upload some clothing items first.');
@@ -576,113 +577,58 @@ window.analyzeWardrobe = async function() {
         resultsArea.innerHTML = `
             <div style="text-align: center; padding: 50px 0;">
               <div class="spinner"></div>
-              <h3 id="wardrobeStatusText" style="margin-top: 20px;">Analyzing your wardrobe...</h3>
+              <h3 id="wardrobeStatusText" style="margin-top: 20px;">Analyzing your wardrobe & matching outfits...</h3>
             </div>
         `;
         resultsArea.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
     try {
-        // Step 1: Analyze Wardrobe Items
         const formData = new FormData();
         wardrobeFiles.forEach(file => {
             formData.append('images', file);
         });
 
-        const analyzeRes = await fetch(`${BACKEND_URL}/api/analyze/wardrobe`, {
+        const res = await fetch(`${BACKEND_URL}/api/analyze/wardrobe-db`, {
             method: 'POST',
             body: formData
         });
 
-        if (!analyzeRes.ok) throw new Error("Failed to analyze wardrobe items.");
-        const analyzeData = await analyzeRes.json();
-        const inventoryItems = analyzeData.items;
-
-        if (!inventoryItems || inventoryItems.length === 0) {
-            throw new Error("AI could not identify any items from the photos.");
-        }
+        if (!res.ok) throw new Error("Failed to match outfits.");
+        const data = await res.json();
         
-        // Map frontend images to the inventory items based on imageIndex
-        inventoryItems.forEach(item => {
-            if (item.imageIndex !== undefined && wardrobeFiles[item.imageIndex]) {
-                item.imageUrl = wardrobeFiles[item.imageIndex].base64Preview;
-            }
-        });
-
-        // Step 2: Mix & Match
-        if (document.getElementById('wardrobeStatusText')) {
-            document.getElementById('wardrobeStatusText').innerText = 'Creating your outfits...';
-        }
-        
-        const styleSelect = document.getElementById('wardrobeStyle');
-        const occasionSelect = document.getElementById('wardrobeOccasion');
-        
-        const style = styleSelect ? styleSelect.value : '';
-        const occasion = occasionSelect ? occasionSelect.value : '';
-
-        const recommendRes = await fetch(`${BACKEND_URL}/api/recommend/wardrobe`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ items: inventoryItems, style, occasion, numberOfOutfits: 6 })
-        });
-
-        if (!recommendRes.ok) throw new Error("Failed to generate outfits.");
-        const recommendData = await recommendRes.json();
-        
-        const outfits = recommendData.outfits;
-        if (!outfits || outfits.length === 0) {
-            throw new Error("Unable to create outfits. Please try again.");
+        const recommendations = data.recommendations;
+        if (!recommendations || recommendations.length === 0) {
+            throw new Error("Unable to match any outfits from our database. Please try different items.");
         }
 
-        // Render Outfits
+        // Render Outfits using renderSurveyCard (just like body analysis)
         let html = `
             <div class="section-title">
-                <div><div class="eyebrow">Results</div><h2>Your Mix & Match Outfits</h2></div>
+                <div><div class="eyebrow">Results</div><h2>Your DB Mix & Match Outfits</h2></div>
             </div>
+            <div class="grid grid-3">
         `;
         
-        outfits.forEach(outfit => {
-            // Find the physical items used in this outfit
-            const usedItems = outfit.itemIds.map(id => inventoryItems.find(inv => inv.id === id)).filter(Boolean);
-            
-            if (usedItems.length > 0) {
-                html += `
-                <div class="panel" style="margin-bottom: 30px;">
-                    <h3 style="font-size: 20px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">${outfit.name.toUpperCase()}</h3>
-                    
-                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
-                        ${usedItems.map(item => `
-                            <div style="text-align: center; width: 100px;">
-                                <div style="width: 100px; height: 100px; border-radius: 8px; background: url('${item.imageUrl}') center/cover; border: 1px solid #ddd; margin-bottom: 8px;"></div>
-                                <span style="font-size: 12px; color: #555;">${item.name}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                    
-                    <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-                        <strong>Why it works:</strong>
-                        <p style="margin-top: 5px; font-size: 14px;">${outfit.reason}</p>
-                    </div>
-                    
-                    <div>
-                        <strong>Styling tips:</strong>
-                        <ul style="margin-top: 5px; padding-left: 20px; font-size: 14px;">
-                            ${outfit.stylingTips.map(tip => `<li>${tip}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-                `;
-            }
-        });
+        // Ensure category is set for routing correctly
+        const itemsToRender = recommendations.map(item => ({ ...item, category: 'outfit' }));
+        html += itemsToRender.map(renderSurveyCard).join('');
+        html += `</div>`;
         
         resultsArea.innerHTML = html;
+
+        // Save for tutorial.html usage if needed (optional for outfit, but good practice)
+        const savedStr = localStorage.getItem('lumi_last_results');
+        let savedData = savedStr ? JSON.parse(savedStr) : {};
+        savedData.outfit = itemsToRender;
+        localStorage.setItem('lumi_last_results', JSON.stringify(savedData));
 
     } catch (error) {
         console.error(error);
         if (resultsArea) {
             resultsArea.innerHTML = `
                 <div style="text-align: center; padding: 50px 0;">
-                    <h3 style="color: red; margin-bottom: 15px;">${error.message || "Unable to create outfits. Please try again."}</h3>
+                    <h3 style="color: red; margin-bottom: 15px;">${error.message || "Unable to match outfits. Please try again."}</h3>
                     <button class="btn" onclick="analyzeWardrobe()">Try Again</button>
                 </div>
             `;
