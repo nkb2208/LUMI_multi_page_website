@@ -180,143 +180,248 @@ const EXPLORE_DATA = [
     ]
   }
 ,
-    {
+        {
     "id": "explore_007",
-    "category": "Makeover",
     "title": "City Chic Makeover",
-    "description": "Transform your daily office look into a sleek, powerful aesthetic that transitions perfectly into evening drinks.",
-    "imageUrl": "https://i.pinimg.com/736x/88/1e/8a/881e8ac8a135f66107ccfa072d73f1d5.jpg",
+    "description": "Transform your daily office look into a sleek, powerful aesthetic.",
     "tags": [
-      "office",
-      "chic",
-      "evening"
+      "Office",
+      "Chic",
+      "Evening"
     ],
-    "recommendations": {
-      "outfit": [
-        "outfit_001",
-        "outfit_002"
-      ],
-      "hair": [
-        "hair_004",
-        "hair_010"
-      ],
-      "makeup": [
-        "makeup_006",
-        "makeup_008"
-      ],
-      "skincare": [
-        "skincare_001",
-        "skincare_002"
-      ]
-    }
+    "lookImageText": "CITY CHIC",
+    "imageUrl": "https://i.pinimg.com/736x/88/1e/8a/881e8ac8a135f66107ccfa072d73f1d5.jpg",
+    "components": {
+      "hair": {
+        "id": "hair_010",
+        "name": "Sleek High Ponytail",
+        "desc": "chic and confident"
+      },
+      "makeup": {
+        "id": "makeup_008",
+        "name": "Date Night Makeup",
+        "desc": "bold red lip"
+      },
+      "outfit": {
+        "id": "outfit_001",
+        "name": "Korean Office Chic",
+        "desc": "crisp and professional"
+      }
+    },
+    "products": [
+      {
+        "name": "Gel vuốt tóc",
+        "price": "Từ ₫95,000",
+        "shopee": "https://shopee.vn/search?keyword=gel%20vuot%20toc",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=gel%20vuot%20toc"
+      },
+      {
+        "name": "Son đỏ lì",
+        "price": "Từ ₫250,000",
+        "shopee": "https://shopee.vn/search?keyword=son%20do%20li",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=son%20do%20li"
+      },
+      {
+        "name": "Áo sơ mi trắng",
+        "price": "Từ ₫180,000",
+        "shopee": "https://shopee.vn/search?keyword=ao%20so%20mi%20trang",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=ao%20so%20mi%20trang"
+      }
+    ]
   },
   {
     "id": "explore_008",
-    "category": "Trend",
-    "title": "The Douyin Doll Craze",
-    "description": "Master the viral Chinese makeup trend featuring dramatic lashes, intense glitter, and a flawless base.",
-    "imageUrl": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "title": "The Douyin Doll",
+    "description": "Master the viral Chinese makeup trend featuring dramatic lashes.",
     "tags": [
-      "douyin",
-      "viral",
-      "glitter"
+      "Douyin",
+      "Viral",
+      "Glitter"
     ],
-    "recommendations": {
-      "outfit": [
-        "outfit_003"
-      ],
-      "hair": [
-        "hair_001",
-        "hair_009"
-      ],
-      "makeup": [
-        "makeup_012",
-        "makeup_009"
-      ],
-      "skincare": [
-        "skincare_010"
-      ]
-    }
+    "lookImageText": "DOUYIN DOLL",
+    "imageUrl": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "components": {
+      "hair": {
+        "id": "hair_009",
+        "name": "Wispy Bangs",
+        "desc": "soft see-through bangs"
+      },
+      "makeup": {
+        "id": "makeup_012",
+        "name": "Douyin Doll Makeup",
+        "desc": "manhua lashes and glitter"
+      },
+      "outfit": {
+        "id": "outfit_003",
+        "name": "Cozy Cafe Minimalist",
+        "desc": "soft and cute"
+      }
+    },
+    "products": [
+      {
+        "name": "Nhũ mắt lấp lánh",
+        "price": "Từ ₫60,000",
+        "shopee": "https://shopee.vn/search?keyword=nhu%20mat",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=nhu%20mat"
+      },
+      {
+        "name": "Mi giả manhua",
+        "price": "Từ ₫45,000",
+        "shopee": "https://shopee.vn/search?keyword=mi%20gia%20manhua",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=mi%20gia%20manhua"
+      },
+      {
+        "name": "Áo len mỏng",
+        "price": "Từ ₫150,000",
+        "shopee": "https://shopee.vn/search?keyword=ao%20len%20mong",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=ao%20len%20mong"
+      }
+    ]
   },
   {
     "id": "explore_009",
-    "category": "Style",
     "title": "Preppy Academia",
-    "description": "Channel your inner scholar with this sophisticated blend of pleated skirts, loafers, and layered knits.",
-    "imageUrl": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "description": "Channel your inner scholar with this sophisticated blend of pleated skirts.",
     "tags": [
-      "academia",
-      "autumn",
-      "preppy"
+      "Academia",
+      "Autumn"
     ],
-    "recommendations": {
-      "outfit": [
-        "outfit_010"
-      ],
-      "hair": [
-        "hair_003"
-      ],
-      "makeup": [
-        "makeup_004"
-      ],
-      "skincare": [
-        "skincare_004"
-      ]
-    }
+    "lookImageText": "PREPPY ACADEMIA",
+    "imageUrl": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "components": {
+      "hair": {
+        "id": "hair_003",
+        "name": "Curtain Bangs",
+        "desc": "face-framing fringe"
+      },
+      "makeup": {
+        "id": "makeup_004",
+        "name": "Clean Girl Makeup",
+        "desc": "minimal and glowing"
+      },
+      "outfit": {
+        "id": "outfit_010",
+        "name": "Academia Preppy",
+        "desc": "pleated skirt and loafers"
+      }
+    },
+    "products": [
+      {
+        "name": "Chân váy xếp ly",
+        "price": "Từ ₫160,000",
+        "shopee": "https://shopee.vn/search?keyword=chan%20vay%20xep%20ly",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=chan%20vay%20xep%20ly"
+      },
+      {
+        "name": "Giày loafer",
+        "price": "Từ ₫220,000",
+        "shopee": "https://shopee.vn/search?keyword=giay%20loafer",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=giay%20loafer"
+      },
+      {
+        "name": "Áo gile len",
+        "price": "Từ ₫130,000",
+        "shopee": "https://shopee.vn/search?keyword=ao%20gile%20len",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=ao%20gile%20len"
+      }
+    ]
   },
   {
     "id": "explore_010",
-    "category": "Makeover",
     "title": "90s Grunge Revival",
-    "description": "Bring back the 90s attitude with matte skin, dark lips, and edgy layered fashion.",
-    "imageUrl": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "description": "Bring back the 90s attitude with matte skin, dark lips, and edgy fashion.",
     "tags": [
-      "grunge",
-      "vintage",
-      "edgy"
+      "Grunge",
+      "Vintage",
+      "Edgy"
     ],
-    "recommendations": {
-      "outfit": [
-        "outfit_009"
-      ],
-      "hair": [
-        "hair_012"
-      ],
-      "makeup": [
-        "makeup_013",
-        "makeup_010"
-      ],
-      "skincare": [
-        "skincare_012"
-      ]
-    }
+    "lookImageText": "90S GRUNGE",
+    "imageUrl": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "components": {
+      "hair": {
+        "id": "hair_012",
+        "name": "Soft Shag Cut",
+        "desc": "modern textured shag"
+      },
+      "makeup": {
+        "id": "makeup_013",
+        "name": "90s Grunge Glam",
+        "desc": "matte skin and dark lips"
+      },
+      "outfit": {
+        "id": "outfit_009",
+        "name": "Y2K Cyberpunk",
+        "desc": "parachute pants and platforms"
+      }
+    },
+    "products": [
+      {
+        "name": "Son màu đất",
+        "price": "Từ ₫190,000",
+        "shopee": "https://shopee.vn/search?keyword=son%20mau%20dat",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=son%20mau%20dat"
+      },
+      {
+        "name": "Quần túi hộp",
+        "price": "Từ ₫250,000",
+        "shopee": "https://shopee.vn/search?keyword=quan%20tui%20hop",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=quan%20tui%20hop"
+      },
+      {
+        "name": "Giày boots",
+        "price": "Từ ₫350,000",
+        "shopee": "https://shopee.vn/search?keyword=giay%20boots",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=giay%20boots"
+      }
+    ]
   },
   {
     "id": "explore_011",
-    "category": "Event",
     "title": "Beach Resort Getaway",
-    "description": "Pack the perfect suitcase with breathable linen outfits, beachy waves, and minimal glowing makeup.",
-    "imageUrl": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "description": "Pack the perfect suitcase with breathable linen outfits and beachy waves.",
     "tags": [
-      "summer",
-      "travel",
-      "resort"
+      "Summer",
+      "Travel",
+      "Resort"
     ],
-    "recommendations": {
-      "outfit": [
-        "outfit_012"
-      ],
-      "hair": [
-        "hair_005",
-        "hair_013"
-      ],
-      "makeup": [
-        "makeup_011"
-      ],
-      "skincare": [
-        "skincare_007",
-        "skincare_010"
-      ]
-    }
+    "lookImageText": "RESORT GETAWAY",
+    "imageUrl": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "components": {
+      "hair": {
+        "id": "hair_013",
+        "name": "Mermaid Waves",
+        "desc": "glamorous continuous waves"
+      },
+      "makeup": {
+        "id": "makeup_011",
+        "name": "Strawberry Makeup",
+        "desc": "fresh and glossy"
+      },
+      "outfit": {
+        "id": "outfit_012",
+        "name": "Summer Linen Resort",
+        "desc": "breathable elegant linen"
+      }
+    },
+    "products": [
+      {
+        "name": "Máy uốn sóng nước",
+        "price": "Từ ₫200,000",
+        "shopee": "https://shopee.vn/search?keyword=may%20uon%20song%20nuoc",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=may%20uon%20song%20nuoc"
+      },
+      {
+        "name": "Set đồ linen",
+        "price": "Từ ₫320,000",
+        "shopee": "https://shopee.vn/search?keyword=set%20linen",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=set%20linen"
+      },
+      {
+        "name": "Mũ cói đi biển",
+        "price": "Từ ₫80,000",
+        "shopee": "https://shopee.vn/search?keyword=mu%20coi",
+        "tiktok": "https://shop.tiktok.com/view/search?keyword=mu%20coi"
+      }
+    ]
   }
 ];
