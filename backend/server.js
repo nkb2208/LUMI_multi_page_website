@@ -97,6 +97,8 @@ app.post('/api/recommend/skincare', upload.single('image'), async (req, res) => 
 });
 
 // WARDROBE ANALYSIS ENDPOINT
+
+// WARDROBE ANALYSIS ENDPOINT
 app.post('/api/analyze/wardrobe', upload.array('images', 10), async (req, res) => {
     try {
         if (!req.files || req.files.length === 0) {
@@ -109,8 +111,26 @@ app.post('/api/analyze/wardrobe', upload.array('images', 10), async (req, res) =
         }));
 
         console.log(`Analyzing ${images.length} wardrobe items...`);
-        const aiResponse = await aiService.analyzeWardrobe(images);
+        const aiResponse = await aiService.analyzeWardrobeItems(images);
 
+        res.json(aiResponse);
+    } catch (error) {
+        console.error("API Error:", error);
+        res.status(500).json({ error: error.message || "System error." });
+    }
+});
+
+// WARDROBE RECOMMEND ENDPOINT
+app.post('/api/recommend/wardrobe', async (req, res) => {
+    try {
+        const { items, style, occasion, numberOfOutfits } = req.body;
+        if (!items || items.length === 0) {
+            return res.status(400).json({ error: "No wardrobe items provided." });
+        }
+        
+        console.log(`Recommending outfits for ${items.length} items...`);
+        const aiResponse = await aiService.recommendWardrobeOutfits(items, style, occasion, numberOfOutfits || 6);
+        
         res.json(aiResponse);
     } catch (error) {
         console.error("API Error:", error);

@@ -225,33 +225,33 @@ CATALOGS:\n${catalogStr}`;
     return await apiKeyManager.executeWithRetry(apiCallFn);
 }
 
-const wardrobeSchema = {
+
+const analyzeWardrobeItemsSchema = {
     type: Type.OBJECT,
     properties: {
-        outfits: {
+        items: {
             type: Type.ARRAY,
             items: {
                 type: Type.OBJECT,
                 properties: {
+                    id: { type: Type.STRING },
                     name: { type: Type.STRING },
-                    description: { type: Type.STRING },
-                    items: { 
-                        type: Type.ARRAY, 
-                        items: { type: Type.STRING, description: "Description of the specific item from the uploaded images used in this outfit." }
-                    }
+                    category: { type: Type.STRING },
+                    color: { type: Type.ARRAY, items: { type: Type.STRING } }
                 },
-                required: ["name", "description", "items"]
+                required: ["id", "name", "category", "color"]
             }
         }
     },
-    required: ["outfits"]
+    required: ["items"]
 };
 
-async function analyzeWardrobe(images) {
-    const systemInstruction = `You are a fashion stylist. I am providing you with multiple images of my clothing items.
-Mix and match them to create 3-5 stylish outfits.
-For each outfit, provide a catchy name, a description of the style/vibe, and a list of the exact items you used from my uploads.
-Do NOT invent items that are not in the pictures.`;
+async function analyzeWardrobeItems(images) {
+    const systemInstruction = `You are an expert fashion AI. I am providing you with multiple images of my clothing items.
+Analyze them and extract a list of items. 
+Each item must have a unique ID (e.g. item_001), a descriptive name, a category (e.g., top, bottom, outerwear, shoes, accessory), and an array of colors.
+Return exactly one item per image provided.
+If an image contains multiple items, extract the main one.`;
 
     const apiCallFn = async (apiKey) => {
         const ai = new GoogleGenAI({ apiKey: apiKey });
@@ -259,7 +259,7 @@ Do NOT invent items that are not in the pictures.`;
         const contents = [{
             role: 'user',
             parts: [
-                { text: "Here are the items in my wardrobe. Mix and match them to create stylish outfits." }
+                { text: "Here are the images of my wardrobe items." }
             ]
         }];
         
@@ -275,8 +275,76 @@ Do NOT invent items that are not in the pictures.`;
             config: {
                 systemInstruction: systemInstruction,
                 responseMimeType: "application/json",
-                responseSchema: wardrobeSchema,
-                temperature: 0.4
+                responseSchema: analyzeWardrobeItemsSchema,
+                temperature: 0.1
+            }
+        });
+        
+        let result = JSON.parse(response.text);
+        
+        // Ensure the items correlate back to the images by injecting a frontend index mapping
+        if (result.items && result.items.length === images.length) {
+            result.items = result.items.map((item, index) => ({
+                ...item,
+                imageIndex: index
+            }));
+        }
+        
+        return result;
+    };
+
+    return await apiKeyManager.executeWithRetry(apiCallFn);
+}
+
+const recommendWardrobeOutfitsSchema = {
+    type: Type.OBJECT,
+    properties: {
+        outfits: {
+            type: Type.ARRAY,
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    id: { type: Type.STRING },
+                    name: { type: Type.STRING },
+                    itemIds: { 
+                        type: Type.ARRAY, 
+                        items: { type: Type.STRING }
+                    },
+                    reason: { type: Type.STRING },
+                    stylingTips: { type: Type.ARRAY, items: { type: Type.STRING } }
+                },
+                required: ["id", "name", "itemIds", "reason", "stylingTips"]
+            }
+        }
+    },
+    required: ["outfits"]
+};
+
+async function recommendWardrobeOutfits(items, style, occasion, numberOfOutfits) {
+    const itemsJson = JSON.stringify(items, null, 2);
+    const systemInstruction = `You are an expert fashion stylist.
+You are given a list of wardrobe items with their IDs, names, categories, and colors.
+Your task is to create ${numberOfOutfits} stylish outfits using ONLY these items.
+DO NOT invent, hallucinate, or add any items that are not in the list.
+Each outfit must include the 'itemIds' array containing the exact IDs of the items used.
+Style requested: ${style || 'Any'}
+Occasion requested: ${occasion || 'Daily'}
+
+Wardrobe Inventory:
+${itemsJson}
+`;
+
+    const apiCallFn = async (apiKey) => {
+        const ai = new GoogleGenAI({ apiKey: apiKey });
+        
+        const response = await ai.models.generateContent({
+            model: 'gemini-3.5-flash-lite',
+            contents: [{ role: 'user', parts: [{ text: "Please generate the outfits." }] }],
+            config: {
+                systemInstruction: systemInstruction,
+                responseMimeType: "application/json",
+                responseSchema: recommendWardrobeOutfitsSchema,
+                temperature: 0.6
             }
         });
         return JSON.parse(response.text);
@@ -289,5 +357,6 @@ module.exports = {
     analyzeFace,
     analyzeBody,
     recommendSkincare,
-    analyzeWardrobe
+    analyzeWardrobeItems,
+    recommendWardrobeOutfits
 };
