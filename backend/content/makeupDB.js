@@ -327,6 +327,192 @@ const MAKEUP_DB = [
       ]
     }
   }
+,
+    {
+    "id": "makeup_009",
+    "name": "Igari Makeup (Drunk Blush)",
+    "category": "makeup",
+    "description": "A Japanese makeup style focusing on blush placed high on the cheeks and right under the eyes.",
+    "tags": [
+      "cute",
+      "blush",
+      "spring"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/2a/39/3a/2a393a525f2066f123c8e4fc27b953d6.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/2a/39/3a/2a393a525f2066f123c8e4fc27b953d6.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Create a flawless, dewy base."
+        },
+        {
+          "title": "Blush",
+          "desc": "Apply pink or peach blush right under the eyes and across the nose bridge."
+        },
+        {
+          "title": "Lips",
+          "desc": "Finish with a sheer, glossy lip tint."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Cream Blush",
+          "purchaseLink": "https://shopee.vn/search?keyword=cream%20blush"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_010",
+    "name": "Smokey Siren Eyes",
+    "category": "makeup",
+    "description": "Elongated, dark, and sultry eye makeup to give a mysterious vibe.",
+    "tags": [
+      "evening",
+      "bold",
+      "siren"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/2c/6d/46/2c6d46059d070104719e75fbaf1fcbb9.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/2c/6d/46/2c6d46059d070104719e75fbaf1fcbb9.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Shadow",
+          "desc": "Apply dark brown shadow focusing on the outer V and elongating it."
+        },
+        {
+          "title": "Liner",
+          "desc": "Draw a sharp inner corner point and a stretched outer wing."
+        },
+        {
+          "title": "Lashes",
+          "desc": "Apply half-lashes at the outer corners to lift the eyes."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Eyeliner",
+          "purchaseLink": "https://shopee.vn/search?keyword=eyeliner"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_011",
+    "name": "Strawberry Makeup",
+    "category": "makeup",
+    "description": "Fresh, red-toned makeup with faux freckles and a glossy finish.",
+    "tags": [
+      "summer",
+      "fresh",
+      "freckles"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/d1/70/4c/d1704c7fb3cf8a2a0d1ecf94e9f90cf0.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/d1/70/4c/d1704c7fb3cf8a2a0d1ecf94e9f90cf0.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Blush",
+          "desc": "Generously apply red or deep pink cream blush on the cheeks and nose."
+        },
+        {
+          "title": "Freckles",
+          "desc": "Use a brown freckle pen to dot faux freckles over the blush."
+        },
+        {
+          "title": "Lips",
+          "desc": "Apply a shiny strawberry-toned lip gloss."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Lip Gloss",
+          "purchaseLink": "https://shopee.vn/search?keyword=lip%20gloss"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_012",
+    "name": "Douyin Doll Makeup",
+    "category": "makeup",
+    "description": "Chinese internet-famous makeup focusing on manhua lashes and intense glitter.",
+    "tags": [
+      "douyin",
+      "glitter",
+      "doll"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Aegyo Sal",
+          "desc": "Highlight the under-eye fat and contour below it to make eyes appear larger."
+        },
+        {
+          "title": "Glitter",
+          "desc": "Apply chunky liquid glitter to the eyelids and inner corners."
+        },
+        {
+          "title": "Lashes",
+          "desc": "Attach spiked 'manhua' style false lashes."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Liquid Glitter",
+          "purchaseLink": "https://shopee.vn/search?keyword=liquid%20glitter"
+        }
+      ]
+    }
+  },
+  {
+    "id": "makeup_013",
+    "name": "90s Grunge Glam",
+    "category": "makeup",
+    "description": "Matte skin, cool-toned brown lips, and smudged eyeliner for a vintage edgy look.",
+    "tags": [
+      "grunge",
+      "90s",
+      "edgy"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Use a matte foundation and powder down the entire face."
+        },
+        {
+          "title": "Eyes",
+          "desc": "Smudge a black kohl pencil along the top and bottom lash lines."
+        },
+        {
+          "title": "Lips",
+          "desc": "Line lips with a dark brown pencil and fill with a matte taupe lipstick."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube",
+      "products": [
+        {
+          "name": "Brown Lip Liner",
+          "purchaseLink": "https://shopee.vn/search?keyword=brown%20lip%20liner"
+        }
+      ]
+    }
+  }
 ];
 
 module.exports = MAKEUP_DB;

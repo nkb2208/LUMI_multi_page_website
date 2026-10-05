@@ -143,6 +143,162 @@ const HAIR_DB = [
       sourceName: "YouTube"
     }
   }
+,
+    {
+    "id": "hair_009",
+    "name": "Wispy Bangs",
+    "category": "hair",
+    "description": "Light, see-through bangs that gently frame the forehead without weighing down the face.",
+    "tags": [
+      "high forehead",
+      "v-line face",
+      "straight hair"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/89/a3/9b/89a39b03947476e336e4f3ebda925232.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/89/a3/9b/89a39b03947476e336e4f3ebda925232.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Section",
+          "desc": "Take a small triangular section at the front."
+        },
+        {
+          "title": "Cut",
+          "desc": "Cut vertically at eyebrow length for a soft edge."
+        },
+        {
+          "title": "Style",
+          "desc": "Use a small hair roller to give them a natural bounce."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube"
+    }
+  },
+  {
+    "id": "hair_010",
+    "name": "Sleek High Ponytail",
+    "category": "hair",
+    "description": "A tightly pulled, high ponytail for a chic and confident look.",
+    "tags": [
+      "round face",
+      "thick hair",
+      "long hair"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/9f/c6/3d/9fc63d91986c757eb79f417e33dc7ec3.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/9f/c6/3d/9fc63d91986c757eb79f417e33dc7ec3.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Gel",
+          "desc": "Apply styling gel to roots and brush hair upwards."
+        },
+        {
+          "title": "Tie",
+          "desc": "Secure tightly at the crown with a strong hair tie."
+        },
+        {
+          "title": "Wrap",
+          "desc": "Take a small piece of hair to wrap around the band and pin it."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube"
+    }
+  },
+  {
+    "id": "hair_011",
+    "name": "French Twist Bob",
+    "category": "hair",
+    "description": "A short, elegant updo perfect for short to medium hair.",
+    "tags": [
+      "short hair",
+      "v-line face",
+      "thin hair"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/4d/74/4b/4d744b8b60b642ec34293eecda133fb8.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/4d/74/4b/4d744b8b60b642ec34293eecda133fb8.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Gather",
+          "desc": "Gather hair at the nape of the neck."
+        },
+        {
+          "title": "Twist",
+          "desc": "Twist upwards and tuck the ends inside."
+        },
+        {
+          "title": "Pin",
+          "desc": "Secure with U-pins and leave a few strands loose."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube"
+    }
+  },
+  {
+    "id": "hair_012",
+    "name": "Soft Shag Cut",
+    "category": "hair",
+    "description": "A modern, textured shag with choppy layers for an edgy vibe.",
+    "tags": [
+      "square face",
+      "thick hair",
+      "wavy hair"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/aa/55/7c/aa557c32b5e282b0e6db6dc131ef7ba6.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/aa/55/7c/aa557c32b5e282b0e6db6dc131ef7ba6.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Layer",
+          "desc": "Create multiple short layers starting from the cheekbones."
+        },
+        {
+          "title": "Texturize",
+          "desc": "Use texturizing shears for a shattered end effect."
+        },
+        {
+          "title": "Style",
+          "desc": "Apply a matte paste to accentuate the choppy layers."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube"
+    }
+  },
+  {
+    "id": "hair_013",
+    "name": "Mermaid Waves",
+    "category": "hair",
+    "description": "Deep, continuous S-waves for a glamorous, voluminous look.",
+    "tags": [
+      "long hair",
+      "thin hair",
+      "round face"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/d6/96/0d/d6960d7ee82c2c0dc8ea1121d15c71be.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/d6/96/0d/d6960d7ee82c2c0dc8ea1121d15c71be.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Prep",
+          "desc": "Apply a heat protectant and volume mousse."
+        },
+        {
+          "title": "Waver",
+          "desc": "Use a 3-barrel waver tool starting close to the roots."
+        },
+        {
+          "title": "Hold",
+          "desc": "Hold each section for 5 seconds, overlapping the last wave."
+        }
+      ],
+      "videoId": "WbVIZTUa4Ws",
+      "sourceName": "YouTube"
+    }
+  }
 ];
 
 module.exports = HAIR_DB;

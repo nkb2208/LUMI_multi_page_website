@@ -208,6 +208,157 @@ const OUTFIT_DB = [
       ]
     }
   }
+,
+    {
+    "id": "outfit_009",
+    "name": "Y2K Cyberpunk",
+    "category": "outfit",
+    "description": "Futuristic 2000s fashion featuring metallic accents, parachute pants, and platform boots.",
+    "tags": [
+      "streetwear",
+      "y2k",
+      "edgy",
+      "hourglass"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/11/4a/5b/114a5bb8dc6dfbe4eb75db0f6795f50b.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/11/4a/5b/114a5bb8dc6dfbe4eb75db0f6795f50b.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Top",
+          "desc": "Wear a tight, metallic or mesh crop top."
+        },
+        {
+          "title": "Bottom",
+          "desc": "Pair with baggy parachute pants or a low-rise cargo skirt."
+        },
+        {
+          "title": "Accessories",
+          "desc": "Add chunky platform boots, a studded belt, and rimless sunglasses."
+        }
+      ]
+    }
+  },
+  {
+    "id": "outfit_010",
+    "name": "Academia Preppy",
+    "category": "outfit",
+    "description": "A smart, scholarly aesthetic with plaid skirts, sweater vests, and loafers.",
+    "tags": [
+      "preppy",
+      "autumn",
+      "pear",
+      "office"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Layering",
+          "desc": "Layer an oversized sweater vest over a crisp white button-down."
+        },
+        {
+          "title": "Bottom",
+          "desc": "Tuck into a pleated plaid mini or midi skirt."
+        },
+        {
+          "title": "Footwear",
+          "desc": "Complete with leather loafers and white frilly ankle socks."
+        }
+      ]
+    }
+  },
+  {
+    "id": "outfit_011",
+    "name": "Cozy Knitwear Layers",
+    "category": "outfit",
+    "description": "Comfortable and chic layers of chunky knits and soft fabrics for cold weather.",
+    "tags": [
+      "winter",
+      "cozy",
+      "casual",
+      "apple"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/32/38/20/32382029707293b593ef07e60155b413.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/32/38/20/32382029707293b593ef07e60155b413.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Start with a thermal turtleneck."
+        },
+        {
+          "title": "Outer",
+          "desc": "Layer an oversized chunky cardigan."
+        },
+        {
+          "title": "Bottom",
+          "desc": "Pair with straight-leg jeans and UGG boots."
+        }
+      ]
+    }
+  },
+  {
+    "id": "outfit_012",
+    "name": "Summer Linen Resort",
+    "category": "outfit",
+    "description": "Breathable and elegant linen sets perfect for a beach vacation or resort stay.",
+    "tags": [
+      "summer",
+      "travel",
+      "elegant",
+      "rectangle"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Set",
+          "desc": "Wear a matching beige linen button-down and wide-leg trousers."
+        },
+        {
+          "title": "Styling",
+          "desc": "Leave the top unbuttoned slightly and tuck in one side."
+        },
+        {
+          "title": "Accessories",
+          "desc": "Add a wide-brim straw hat and woven sandals."
+        }
+      ]
+    }
+  },
+  {
+    "id": "outfit_013",
+    "name": "Athleisure Chic",
+    "category": "outfit",
+    "description": "Sporty yet stylish everyday wear combining comfort with fashion pieces.",
+    "tags": [
+      "casual",
+      "daily",
+      "sporty",
+      "inverted triangle"
+    ],
+    "primaryImage": "https://i.pinimg.com/736x/77/8e/3c/778e3c490a6f44d18e7e1a3d9ebf1f23.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/77/8e/3c/778e3c490a6f44d18e7e1a3d9ebf1f23.jpg",
+    "tutorial": {
+      "steps": [
+        {
+          "title": "Base",
+          "desc": "Wear a seamless matching sports bra and leggings set."
+        },
+        {
+          "title": "Outer",
+          "desc": "Throw on an oversized tailored blazer for a chic contrast."
+        },
+        {
+          "title": "Footwear",
+          "desc": "Finish with chunky white sneakers and a baseball cap."
+        }
+      ]
+    }
+  }
 ];
 
 module.exports = OUTFIT_DB;

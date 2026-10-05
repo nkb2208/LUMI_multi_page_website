@@ -179,4 +179,144 @@ const EXPLORE_DATA = [
       { name: "Áo croptop Y2K", price: "Từ ₫150,000", shopee: "https://shopee.vn/search?keyword=áo%20croptop%20y2k", tiktok: "https://shop.tiktok.com/view/search?keyword=áo%20croptop%20y2k" }
     ]
   }
+,
+    {
+    "id": "explore_007",
+    "category": "Makeover",
+    "title": "City Chic Makeover",
+    "description": "Transform your daily office look into a sleek, powerful aesthetic that transitions perfectly into evening drinks.",
+    "imageUrl": "https://i.pinimg.com/736x/88/1e/8a/881e8ac8a135f66107ccfa072d73f1d5.jpg",
+    "tags": [
+      "office",
+      "chic",
+      "evening"
+    ],
+    "recommendations": {
+      "outfit": [
+        "outfit_001",
+        "outfit_002"
+      ],
+      "hair": [
+        "hair_004",
+        "hair_010"
+      ],
+      "makeup": [
+        "makeup_006",
+        "makeup_008"
+      ],
+      "skincare": [
+        "skincare_001",
+        "skincare_002"
+      ]
+    }
+  },
+  {
+    "id": "explore_008",
+    "category": "Trend",
+    "title": "The Douyin Doll Craze",
+    "description": "Master the viral Chinese makeup trend featuring dramatic lashes, intense glitter, and a flawless base.",
+    "imageUrl": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "tags": [
+      "douyin",
+      "viral",
+      "glitter"
+    ],
+    "recommendations": {
+      "outfit": [
+        "outfit_003"
+      ],
+      "hair": [
+        "hair_001",
+        "hair_009"
+      ],
+      "makeup": [
+        "makeup_012",
+        "makeup_009"
+      ],
+      "skincare": [
+        "skincare_010"
+      ]
+    }
+  },
+  {
+    "id": "explore_009",
+    "category": "Style",
+    "title": "Preppy Academia",
+    "description": "Channel your inner scholar with this sophisticated blend of pleated skirts, loafers, and layered knits.",
+    "imageUrl": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "tags": [
+      "academia",
+      "autumn",
+      "preppy"
+    ],
+    "recommendations": {
+      "outfit": [
+        "outfit_010"
+      ],
+      "hair": [
+        "hair_003"
+      ],
+      "makeup": [
+        "makeup_004"
+      ],
+      "skincare": [
+        "skincare_004"
+      ]
+    }
+  },
+  {
+    "id": "explore_010",
+    "category": "Makeover",
+    "title": "90s Grunge Revival",
+    "description": "Bring back the 90s attitude with matte skin, dark lips, and edgy layered fashion.",
+    "imageUrl": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "tags": [
+      "grunge",
+      "vintage",
+      "edgy"
+    ],
+    "recommendations": {
+      "outfit": [
+        "outfit_009"
+      ],
+      "hair": [
+        "hair_012"
+      ],
+      "makeup": [
+        "makeup_013",
+        "makeup_010"
+      ],
+      "skincare": [
+        "skincare_012"
+      ]
+    }
+  },
+  {
+    "id": "explore_011",
+    "category": "Event",
+    "title": "Beach Resort Getaway",
+    "description": "Pack the perfect suitcase with breathable linen outfits, beachy waves, and minimal glowing makeup.",
+    "imageUrl": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "tags": [
+      "summer",
+      "travel",
+      "resort"
+    ],
+    "recommendations": {
+      "outfit": [
+        "outfit_012"
+      ],
+      "hair": [
+        "hair_005",
+        "hair_013"
+      ],
+      "makeup": [
+        "makeup_011"
+      ],
+      "skincare": [
+        "skincare_007",
+        "skincare_010"
+      ]
+    }
+  }
 ];
