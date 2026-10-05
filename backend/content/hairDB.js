@@ -154,8 +154,8 @@ const HAIR_DB = [
       "v-line face",
       "straight hair"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/89/a3/9b/89a39b03947476e336e4f3ebda925232.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/89/a3/9b/89a39b03947476e336e4f3ebda925232.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/dc/37/3f/dc373f1b95eac305133ad555c05a4ba2.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/dc/37/3f/dc373f1b95eac305133ad555c05a4ba2.jpg",
     "tutorial": {
       "steps": [
         {
@@ -171,7 +171,7 @@ const HAIR_DB = [
           "desc": "Use a small hair roller to give them a natural bounce."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "S91gEnXPULg",
       "sourceName": "YouTube"
     }
   },
@@ -185,8 +185,8 @@ const HAIR_DB = [
       "thick hair",
       "long hair"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/9f/c6/3d/9fc63d91986c757eb79f417e33dc7ec3.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/9f/c6/3d/9fc63d91986c757eb79f417e33dc7ec3.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/88/f5/30/88f530d915ddeabcb638c24f0ff23705.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/88/f5/30/88f530d915ddeabcb638c24f0ff23705.jpg",
     "tutorial": {
       "steps": [
         {
@@ -202,7 +202,7 @@ const HAIR_DB = [
           "desc": "Take a small piece of hair to wrap around the band and pin it."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "FOQPJxtgUkw",
       "sourceName": "YouTube"
     }
   },
@@ -216,8 +216,8 @@ const HAIR_DB = [
       "v-line face",
       "thin hair"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/4d/74/4b/4d744b8b60b642ec34293eecda133fb8.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/4d/74/4b/4d744b8b60b642ec34293eecda133fb8.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/e3/63/d7/e363d73f923fe063dd6d6f2f62cd6e7e.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/e3/63/d7/e363d73f923fe063dd6d6f2f62cd6e7e.jpg",
     "tutorial": {
       "steps": [
         {
@@ -233,7 +233,7 @@ const HAIR_DB = [
           "desc": "Secure with U-pins and leave a few strands loose."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "1c_gHonRtYI",
       "sourceName": "YouTube"
     }
   },
@@ -247,8 +247,8 @@ const HAIR_DB = [
       "thick hair",
       "wavy hair"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/aa/55/7c/aa557c32b5e282b0e6db6dc131ef7ba6.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/aa/55/7c/aa557c32b5e282b0e6db6dc131ef7ba6.jpg",
+    "primaryImage": "https://i.pinimg.com/1200x/90/29/cd/9029cda20f5b062f447024dcc43b7dc7.jpg",
+    "fallbackImage": "https://i.pinimg.com/1200x/90/29/cd/9029cda20f5b062f447024dcc43b7dc7.jpg",
     "tutorial": {
       "steps": [
         {
@@ -264,7 +264,7 @@ const HAIR_DB = [
           "desc": "Apply a matte paste to accentuate the choppy layers."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "dF60AveAFs8",
       "sourceName": "YouTube"
     }
   },
@@ -278,8 +278,8 @@ const HAIR_DB = [
       "thin hair",
       "round face"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/d6/96/0d/d6960d7ee82c2c0dc8ea1121d15c71be.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/d6/96/0d/d6960d7ee82c2c0dc8ea1121d15c71be.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/b6/96/b2/b696b2d826ddfe38a7165cd382e0de6e.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/b6/96/b2/b696b2d826ddfe38a7165cd382e0de6e.jpg",
     "tutorial": {
       "steps": [
         {
@@ -295,7 +295,7 @@ const HAIR_DB = [
           "desc": "Hold each section for 5 seconds, overlapping the last wave."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "a2ySvhm2qG8",
       "sourceName": "YouTube"
     }
   }

@@ -26,7 +26,7 @@ const MAKEUP_DB = [
           "desc": "Finish with a hydrating lip oil or sheer gloss."
         }
       ],
-      "videoId": "y46hvE9JAXo",
+      "videoId": "Hkr5hoZpQ_8",
       "sourceName": "YouTube",
       "products": [
         {
@@ -67,7 +67,7 @@ const MAKEUP_DB = [
           "desc": "Apply lip tint in the center of the lips and blend outwards."
         }
       ],
-      "videoId": "wE08NnJzC_8",
+      "videoId": "ze-xsMlI5I4",
       "sourceName": "YouTube",
       "products": [
         {
@@ -108,7 +108,7 @@ const MAKEUP_DB = [
           "desc": "Use a coral lipstick or tint to tie the look together."
         }
       ],
-      "videoId": "Zq1fFv0f2Y4",
+      "videoId": "IZ7xBvqiXsI",
       "sourceName": "YouTube",
       "products": [
         {
@@ -149,7 +149,7 @@ const MAKEUP_DB = [
           "desc": "Brush brows up with a clear brow gel for a laminated effect."
         }
       ],
-      "videoId": "oF0c5q_qC0c",
+      "videoId": "P3UJj3Dm7ao",
       "sourceName": "YouTube",
       "products": [
         {
@@ -190,7 +190,7 @@ const MAKEUP_DB = [
           "desc": "Apply volumizing mascara or individual falsies to the outer corners."
         }
       ],
-      "videoId": "1r_2-sV0g3Y",
+      "videoId": "G8hRmKDqJo4",
       "sourceName": "YouTube",
       "products": [
         {
@@ -231,7 +231,7 @@ const MAKEUP_DB = [
           "desc": "Create a soft cut crease using neutral brown shades and add a subtle shimmer on the lid."
         }
       ],
-      "videoId": "b5D3n4fV7yA",
+      "videoId": "A_SVwR4a8FU",
       "sourceName": "YouTube",
       "products": [
         {
@@ -272,7 +272,7 @@ const MAKEUP_DB = [
           "desc": "Use a brown lip liner with a nude lipstick."
         }
       ],
-      "videoId": "3GE20RX6Nw0",
+      "videoId": "1usDj5WGmbI",
       "sourceName": "YouTube",
       "products": [
         {
@@ -313,7 +313,7 @@ const MAKEUP_DB = [
           "desc": "Outline lips carefully with red liner, then fill in with a long-lasting matte red lipstick."
         }
       ],
-      "videoId": "dQw4w9WgXcQ",
+      "videoId": "aipwyIoE1Qc",
       "sourceName": "YouTube",
       "products": [
         {
@@ -338,8 +338,8 @@ const MAKEUP_DB = [
       "blush",
       "spring"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/2a/39/3a/2a393a525f2066f123c8e4fc27b953d6.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/2a/39/3a/2a393a525f2066f123c8e4fc27b953d6.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/46/e2/c6/46e2c61d7f47c3ecea04c5ce80058e16.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/46/e2/c6/46e2c61d7f47c3ecea04c5ce80058e16.jpg",
     "tutorial": {
       "steps": [
         {
@@ -355,7 +355,7 @@ const MAKEUP_DB = [
           "desc": "Finish with a sheer, glossy lip tint."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "LT_nol0NOfc",
       "sourceName": "YouTube",
       "products": [
         {
@@ -375,8 +375,8 @@ const MAKEUP_DB = [
       "bold",
       "siren"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/2c/6d/46/2c6d46059d070104719e75fbaf1fcbb9.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/2c/6d/46/2c6d46059d070104719e75fbaf1fcbb9.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/5c/49/68/5c496812dbcead069fefb059adac2030.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/5c/49/68/5c496812dbcead069fefb059adac2030.jpg",
     "tutorial": {
       "steps": [
         {
@@ -392,7 +392,7 @@ const MAKEUP_DB = [
           "desc": "Apply half-lashes at the outer corners to lift the eyes."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "CpW3ZDLc8ZE",
       "sourceName": "YouTube",
       "products": [
         {
@@ -412,8 +412,8 @@ const MAKEUP_DB = [
       "fresh",
       "freckles"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/d1/70/4c/d1704c7fb3cf8a2a0d1ecf94e9f90cf0.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/d1/70/4c/d1704c7fb3cf8a2a0d1ecf94e9f90cf0.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/4e/f7/8a/4ef78acdd52bce3d0f0e41ce48883dd3.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/4e/f7/8a/4ef78acdd52bce3d0f0e41ce48883dd3.jpg",
     "tutorial": {
       "steps": [
         {
@@ -429,7 +429,7 @@ const MAKEUP_DB = [
           "desc": "Apply a shiny strawberry-toned lip gloss."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "74KK4YyMnJM",
       "sourceName": "YouTube",
       "products": [
         {
@@ -449,8 +449,8 @@ const MAKEUP_DB = [
       "glitter",
       "doll"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/42/95/85/4295859a6667dd1c1a1344e062e0b5de.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/42/95/85/4295859a6667dd1c1a1344e062e0b5de.jpg",
     "tutorial": {
       "steps": [
         {
@@ -466,7 +466,7 @@ const MAKEUP_DB = [
           "desc": "Attach spiked 'manhua' style false lashes."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "U6aOGAkFVZQ",
       "sourceName": "YouTube",
       "products": [
         {
@@ -486,8 +486,8 @@ const MAKEUP_DB = [
       "90s",
       "edgy"
     ],
-    "primaryImage": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
-    "fallbackImage": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "primaryImage": "https://i.pinimg.com/736x/58/db/34/58db34a90537f2b26f3e323f52caf534.jpg",
+    "fallbackImage": "https://i.pinimg.com/736x/58/db/34/58db34a90537f2b26f3e323f52caf534.jpg",
     "tutorial": {
       "steps": [
         {
@@ -503,7 +503,7 @@ const MAKEUP_DB = [
           "desc": "Line lips with a dark brown pencil and fill with a matte taupe lipstick."
         }
       ],
-      "videoId": "WbVIZTUa4Ws",
+      "videoId": "dfopdzEBBOw",
       "sourceName": "YouTube",
       "products": [
         {

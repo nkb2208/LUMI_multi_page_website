@@ -190,7 +190,7 @@ const EXPLORE_DATA = [
       "Evening"
     ],
     "lookImageText": "CITY CHIC",
-    "imageUrl": "https://i.pinimg.com/736x/88/1e/8a/881e8ac8a135f66107ccfa072d73f1d5.jpg",
+    "imageUrl": "https://i.pinimg.com/736x/12/5f/6f/125f6fd4bb736b6f2e775d5e9aefc989.jpg",
     "components": {
       "hair": {
         "id": "hair_010",
@@ -239,7 +239,7 @@ const EXPLORE_DATA = [
       "Glitter"
     ],
     "lookImageText": "DOUYIN DOLL",
-    "imageUrl": "https://i.pinimg.com/736x/a2/1f/03/a21f03ce3e08fbf957df3f48a1c6aeb9.jpg",
+    "imageUrl": "https://i.pinimg.com/736x/81/cd/98/81cd98a73e85a15c8fecc1fda830a64f.jpg",
     "components": {
       "hair": {
         "id": "hair_009",
@@ -287,7 +287,7 @@ const EXPLORE_DATA = [
       "Autumn"
     ],
     "lookImageText": "PREPPY ACADEMIA",
-    "imageUrl": "https://i.pinimg.com/736x/a7/9d/28/a79d28dbd6b5e0adcf0c7f2ef8c13012.jpg",
+    "imageUrl": "https://i.pinimg.com/1200x/1c/52/1d/1c521d61dae70fef5e0df11bf9edbb43.jpg",
     "components": {
       "hair": {
         "id": "hair_003",
@@ -336,7 +336,7 @@ const EXPLORE_DATA = [
       "Edgy"
     ],
     "lookImageText": "90S GRUNGE",
-    "imageUrl": "https://i.pinimg.com/736x/77/b0/02/77b002ed5316345ec4666cfeb8f0110c.jpg",
+    "imageUrl": "https://i.pinimg.com/736x/3e/af/1a/3eaf1ad5193dc6e3348e3cd310309c56.jpg",
     "components": {
       "hair": {
         "id": "hair_012",
@@ -385,7 +385,7 @@ const EXPLORE_DATA = [
       "Resort"
     ],
     "lookImageText": "RESORT GETAWAY",
-    "imageUrl": "https://i.pinimg.com/736x/ca/3d/8c/ca3d8ccf55a122e4d0fc4e91264c78b8.jpg",
+    "imageUrl": "https://i.pinimg.com/736x/9f/86/d5/9f86d5d0071e6c9f58a08f2fc6e4aed5.jpg",
     "components": {
       "hair": {
         "id": "hair_013",

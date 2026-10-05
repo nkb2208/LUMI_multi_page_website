@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grid.innerHTML = EXPLORE_DATA.map(item => 
         '<a class="result card" href="explore-detail.html?look=' + item.id + '">' +
             '<div class="look-img">' + (item.lookImageText || item.title) + '</div>' +
-            '<h3>' + item.title + '</h3>' +
+            '<h3 style= "margin-top:15px">' + item.title + '</h3>' +
             '<p>' + item.description + '</p>' +
             item.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') +
         '</a>'
