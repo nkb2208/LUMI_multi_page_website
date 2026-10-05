@@ -1,164 +1,38 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LUMI Explore</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js?v=1791175212181"></script>
-</head>
-<body>
-<nav class="nav">
-  <a class="logo" href="index.html">LUMI</a>
-  <div class="navlinks">
-    <a href="index.html">Home</a>
-    <a href="hair.html">Hair</a>
-    <a href="face.html">Face</a>
-    <a href="outfit.html">Outfit</a>
-    <a class="active" href="explore.html">Explore</a>
-  </div>
-</nav>
-
-<main class="container">
-  <div class="eyebrow">Explore</div>
-  <h1>Bring everything together.</h1>
-  <p>Explore uses the profile you build across LUMI to create complete looks: outfit + hair + makeup + finishing details.</p>
-  
-  <div class="notice">Connect your Body profile and explore the Hair, Makeup and Skincare spaces first for more personalized recommendations.</div>
-  
-  <div class="section-title">
-    <div>
-      <div class="eyebrow">For you</div>
-      <h2>Complete looks</h2>
-    </div>
-  </div>
-  
-  <div class="grid grid-3" id="explore-grid">
-    <!-- Content injected via JS -->
-  </div>
-</main>
-
 <script>
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('explore-grid');
     if (!grid) return;
     
-    try {
-        const res = await fetch(`${BACKEND_URL}/api/explore`);
-        if (!res.ok) throw new Error("Failed to load");
-        const exploreData = await res.json();
-        
-        grid.innerHTML = exploreData.map(item => \`
-            <a class="result card" href="explore-detail.html?look=\${item.id}">
-                <div class="look-img">\${item.lookImageText || item.title}</div>
-                <h3>\${item.title}</h3>
-                <p>\${item.description}</p>
-                \${item.tags.map(tag => \`<span class="tag">\${tag}</span>\`).join('')}
-            </a>
-        \`).join('');
-        } catch(e) {
-        console.error("Error loading explore DB:", e);
-        const exploreData = [
-  {
-    id: "soft",
-    title: "Soft Day",
-    description: "Soft waves + natural glow + relaxed feminine outfit.",
-    tags: ["Campus", "Daytime"],
-    lookImageText: "SOFT DAY",
-    components: {
-      hair: {
-        id: "hair_002",
-        name: "Soft Long Layers",
-        desc: "gentle waves · face framing"
-      },
-      makeup: {
-        id: "makeup_001",
-        name: "Soft Everyday Glow",
-        desc: "natural and dewy finish"
-      },
-      outfit: {
-        id: "outfit_005",
-        name: "Korean Minimalist",
-        desc: "relaxed top + straight bottoms"
-      }
-    },
-    products: [
-      { name: "Máy uốn tóc 32mm", price: "Từ ₫250,000", shopee: "https://shopee.vn/search?keyword=máy%20uốn%20tóc%2032mm", tiktok: "https://shop.tiktok.com/view/search?keyword=máy%20uốn%20tóc%2032mm" },
-      { name: "Kem chống nắng Glow", price: "Từ ₫180,000", shopee: "https://shopee.vn/search?keyword=kem%20chống%20nắng%20glow", tiktok: "https://shop.tiktok.com/view/search?keyword=kem%20chống%20nắng%20glow" },
-      { name: "Túi Tote vải", price: "Từ ₫90,000", shopee: "https://shopee.vn/search?keyword=túi%20tote%20vải", tiktok: "https://shop.tiktok.com/view/search?keyword=túi%20tote%20vải" }
-    ]
-  },
-  {
-    id: "smart",
-    title: "Smart & Polished",
-    description: "Sleek straight hair + soft glam makeup + structured outfit.",
-    tags: ["Presentation", "Work"],
-    lookImageText: "SMART",
-    components: {
-      hair: {
-        id: "hair_004",
-        name: "Sleek Straight Glass Hair",
-        desc: "smooth and professional"
-      },
-      makeup: {
-        id: "makeup_006",
-        name: "Soft Glam",
-        desc: "defined and confident"
-      },
-      outfit: {
-        id: "outfit_001",
-        name: "Korean Office Chic",
-        desc: "structured blazer + trousers"
-      }
-    },
-    products: [
-      { name: "Máy ép tóc thẳng", price: "Từ ₫199,000", shopee: "https://shopee.vn/search?keyword=máy%20ép%20tóc", tiktok: "https://shop.tiktok.com/view/search?keyword=máy%20ép%20tóc" },
-      { name: "Bảng phấn mắt", price: "Từ ₫150,000", shopee: "https://shopee.vn/search?keyword=bảng%20phấn%20mắt", tiktok: "https://shop.tiktok.com/view/search?keyword=bảng%20phấn%20mắt" },
-      { name: "Áo Blazer nữ", price: "Từ ₫350,000", shopee: "https://shopee.vn/search?keyword=áo%20blazer%20nữ", tiktok: "https://shop.tiktok.com/view/search?keyword=áo%20blazer%20nữ" }
-    ]
-  },
-  {
-    id: "weekend",
-    title: "Weekend Glow",
-    description: "Messy bun + clean girl makeup + casual streetwear.",
-    tags: ["Weekend", "Easy"],
-    lookImageText: "WEEKEND",
-    components: {
-      hair: {
-        id: "hair_006",
-        name: "Low Messy Bun",
-        desc: "effortless and quick"
-      },
-      makeup: {
-        id: "makeup_004",
-        name: "Clean Girl Makeup",
-        desc: "fresh and minimalistic"
-      },
-      outfit: {
-        id: "outfit_002",
-        name: "Douyin Streetwear",
-        desc: "comfortable casual combination"
-      }
-    },
-    products: [
-      { name: "Kẹp tóc càng cua", price: "Từ ₫25,000", shopee: "https://shopee.vn/search?keyword=kẹp%20tóc%20càng%20cua", tiktok: "https://shop.tiktok.com/view/search?keyword=kẹp%20tóc%20càng%20cua" },
-      { name: "Son bóng", price: "Từ ₫120,000", shopee: "https://shopee.vn/search?keyword=son%20bóng", tiktok: "https://shop.tiktok.com/view/search?keyword=son%20bóng" },
-      { name: "Quần ống rộng", price: "Từ ₫150,000", shopee: "https://shopee.vn/search?keyword=quần%20ống%20rộng%20nữ", tiktok: "https://shop.tiktok.com/view/search?keyword=quần%20ống%20rộng%20nữ" }
-    ]
-  }
-];
-;
-        const grid = document.getElementById('explore-grid');
-        grid.innerHTML = exploreData.map(item => 
-            '<a class="result card" href="explore-detail.html?look=' + item.id + '">' +
-                '<div class="look-img">' + (item.lookImageText || item.title) + '</div>' +
-                '<h3>' + item.title + '</h3>' +
-                '<p>' + item.description + '</p>' +
-                item.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') +
-            '</a>'
-        ).join('');
-    }
+    grid.innerHTML = EXPLORE_DATA.map(item => 
+        '<a class="result card" href="explore-detail.html?look=' + item.id + '">' +
+            '<div class="look-img">' + (item.lookImageText || item.title) + '</div>' +
+            '<h3>' + item.title + '</h3>' +
+            '<p>' + item.description + '</p>' +
+            item.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') +
+        '</a>'
+    ).join('');
 });
-</script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LUMI Explore</title><link rel="stylesheet" href="styles.css"></head><body>
+<nav class="nav"><a class="logo" href="index.html">LUMI</a><div class="navlinks"><a href="index.html">Home</a><a href="hair.html">Hair</a><a href="face.html">Face</a><a href="outfit.html">Outfit</a><a class="active" href="explore.html">Explore</a></div></nav>
+<main class="container"><div class="eyebrow">Explore</div><h1>Bring everything together.</h1><p>Explore uses the profile you build across LUMI to create complete looks: outfit + hair + makeup + finishing details.</p>
+<div class="notice">Connect your Body profile and explore the Hair, Makeup and Skincare spaces first for more personalized recommendations.</div>
+<div class="section-title"><div><div class="eyebrow">For you</div><h2>Complete looks</h2></div></div>
+<div class="grid grid-3"><a class="result card" href="explore-detail.html?look=soft"><div class="look-img" style="background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80') center/cover;"></div><h3>Soft Day</h3><p>Soft waves + natural glow + relaxed feminine outfit.</p><span class="tag">Campus</span><span class="tag">Daytime</span></a>
+<a class="result card" href="explore-detail.html?look=smart"><div class="look-img" style="background: url('https://images.unsplash.com/photo-1542596594-649edbc13630?w=500&q=80') center/cover;"></div><h3>Smart & Polished</h3><p>Low ponytail + defined makeup + structured outfit.</p><span class="tag">Presentation</span><span class="tag">Work</span></a>
+<a class="result card" href="explore-detail.html?look=weekend"><div class="look-img" style="background: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80') center/cover;"></div><h3>Weekend Glow</h3><p>Easy hair + fresh makeup + casual wardrobe combination.</p><span class="tag">Weekend</span><span class="tag">Easy</span></a></div>
+
+<div class="section-title" style="margin-top: 60px;"><div><div class="eyebrow">About the Creator</div><h2>Founder & Stylist</h2></div></div>
+<div class="panel" style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+  <div style="width: 150px; height: 150px; border-radius: 50%; background: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80') center/cover; flex-shrink: 0;"></div>
+  <div>
+    <h3 style="margin-bottom: 10px;">Vũ Trịnh Minh Thi</h3>
+    <p>Founder & Creator of LUMI. Passionate about empowering individuals through personalized beauty and style recommendations. LUMI is built to make professional styling accessible to everyone via AI.</p>
+    <div style="margin-top: 15px;">
+      <a href="#" class="btn secondary" style="padding: 5px 15px; font-size: 14px;">Facebook</a>
+      <a href="#" class="btn secondary" style="padding: 5px 15px; font-size: 14px; margin-left: 10px;">Instagram</a>
+      <a href="#" class="btn secondary" style="padding: 5px 15px; font-size: 14px; margin-left: 10px;">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+</main></body></html>
