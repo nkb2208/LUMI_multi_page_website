@@ -73,16 +73,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('ed-title').textContent = data.title;
         const imgBox = document.getElementById('ed-image');
         imgBox.textContent = data.lookImageText;
-        imgBox.style.background = \`url('\${data.imageUrl}') center/cover\`;
         
         document.getElementById('ed-hair-desc').innerHTML = \`<b>\${data.components.hair.name}</b> · \${data.components.hair.desc}\`;
-        document.getElementById('ed-hair-link').href = \`tutorial.html?id=\${data.components.hair.id}&category=hair\`;
+        const hairLink = document.getElementById('ed-hair-link');
+        hairLink.href = \`tutorial.html?id=\${data.components.hair.id}&category=hair\`;
+        hairLink.onclick = () => { localStorage.setItem('lumi_selected_tutorial_id', data.components.hair.id); localStorage.setItem('lumi_selected_tutorial_cat', 'hair'); };
         
         document.getElementById('ed-makeup-desc').innerHTML = \`<b>\${data.components.makeup.name}</b> · \${data.components.makeup.desc}\`;
-        document.getElementById('ed-makeup-link').href = \`tutorial.html?id=\${data.components.makeup.id}&category=makeup\`;
+        const makeupLink = document.getElementById('ed-makeup-link');
+        makeupLink.href = \`tutorial.html?id=\${data.components.makeup.id}&category=makeup\`;
+        makeupLink.onclick = () => { localStorage.setItem('lumi_selected_tutorial_id', data.components.makeup.id); localStorage.setItem('lumi_selected_tutorial_cat', 'makeup'); };
         
         document.getElementById('ed-outfit-desc').innerHTML = \`<b>\${data.components.outfit.name}</b> · \${data.components.outfit.desc}\`;
-        document.getElementById('ed-outfit-link').href = \`tutorial.html?id=\${data.components.outfit.id}&category=outfit\`;
+        const outfitLink = document.getElementById('ed-outfit-link');
+        outfitLink.href = \`tutorial.html?id=\${data.components.outfit.id}&category=outfit\`;
+        outfitLink.onclick = () => { localStorage.setItem('lumi_selected_tutorial_id', data.components.outfit.id); localStorage.setItem('lumi_selected_tutorial_cat', 'outfit'); };
         
         const productsContainer = document.getElementById('ed-products');
         productsContainer.innerHTML = data.products.map(p => \`
